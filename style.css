@@ -91,7 +91,12 @@ button:hover{
 }
 
 img{
-    height: 250px;
+    height: 300px;
+    width: auto;
+    border-radius: 50%;
+}
+.logo_img{
+    height: 10px;
     width: auto;
 }
 
