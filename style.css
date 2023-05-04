@@ -23,6 +23,11 @@ nav{
     padding: 0 2rem;
 }
 
+icon{
+    height: 50px;
+    width: auto;
+}
+
 nav a{
    text-decoration: none;
    color: black;
@@ -97,9 +102,9 @@ img{
     width: auto;
     border-radius: 50%;
 }
-.logo_img{
-    height: 10px;
-    width: auto;
+.logo-image{
+    height: 50px;
+    margin-right: 10px;
 }
 
 .title {
@@ -107,7 +112,10 @@ img{
     color: #333;
 }
 
-/* Set up the body */
+.line {
+    border-top: 1px solid black; 
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.5;
@@ -115,7 +123,6 @@ body {
     background-color: #f9f9f9;
   }
   
-  /* Set up the header */
   header {
     padding: 2rem;
     background-color: #fdcc84;
@@ -123,7 +130,6 @@ body {
     text-align: center;
   }
   
-  /* Style the main title */
   .title {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -131,7 +137,6 @@ body {
     letter-spacing: 0.2rem;
   }
   
-  /* Style the subtitles */
   .subtitle {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -139,7 +144,6 @@ body {
     letter-spacing: 0.1rem;
   }
   
-  /* Style the education section */
   .education {
     padding: 2rem;
   }
@@ -152,7 +156,6 @@ body {
     margin-bottom: 0;
   }
   
-  /* Style the projects section */
   .projects {
     padding: 2rem;
   }
@@ -165,12 +168,12 @@ body {
     margin-bottom: 0;
   }
   
-  /* Style the links in the projects section */
   .projects a {
     color: #444;
     text-decoration: none;
     border-bottom: 2px solid #444;
     transition: border-bottom-color 0.2s ease-in-out;
+    font-weight: bold;
   }
   
   .projects a:hover {
@@ -202,6 +205,8 @@ body {
   .volunteer li:last-child {
     margin-bottom: 0;
   }
+
+
 
 @media screen and (max-width: 760px){
     .hero-container{
