@@ -42,6 +42,8 @@ nav a:hover{
     grid-template-columns: 1fr 1fr;
     height: 95vh;
     padding: 3rem calc((100vw - 1300px)/2);
+    margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .column-left{
@@ -91,7 +93,7 @@ button:hover{
 }
 
 img{
-    height: 300px;
+    height: 400px;
     width: auto;
     border-radius: 50%;
 }
@@ -99,6 +101,107 @@ img{
     height: 10px;
     width: auto;
 }
+
+.title {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Set up the body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    color: #444;
+    background-color: #f9f9f9;
+  }
+  
+  /* Set up the header */
+  header {
+    padding: 2rem;
+    background-color: #fdcc84;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Style the main title */
+  .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  
+  /* Style the subtitles */
+  .subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  
+  /* Style the education section */
+  .education {
+    padding: 2rem;
+  }
+  
+  .education li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .education li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Style the projects section */
+  .projects {
+    padding: 2rem;
+  }
+  
+  .projects li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Style the links in the projects section */
+  .projects a {
+    color: #444;
+    text-decoration: none;
+    border-bottom: 2px solid #444;
+    transition: border-bottom-color 0.2s ease-in-out;
+  }
+  
+  .projects a:hover {
+    border-bottom-color: #222;
+  }
+  
+  /* Style the skills section */
+  .skills {
+    padding: 2rem;
+  }
+  
+  .skills li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Style the volunteer section */
+  .volunteer {
+    padding: 2rem;
+  }
+  
+  .volunteer li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .volunteer li:last-child {
+    margin-bottom: 0;
+  }
 
 @media screen and (max-width: 760px){
     .hero-container{
