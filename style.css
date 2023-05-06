@@ -15,17 +15,13 @@ nav{
     padding: 0rem calc((100vw - 1300px) / 2);
 }
 
+
 .logo{
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
     padding: 0 2rem;
-}
-
-icon{
-    height: 50px;
-    width: auto;
 }
 
 nav a{
@@ -102,9 +98,14 @@ img{
     width: auto;
     border-radius: 50%;
 }
+
 .logo-image{
-    height: 50px;
+    height: 100px;
     margin-right: 10px;
+}
+
+.indented-paragraph{
+    text-indent: 50px;
 }
 
 .title {
@@ -156,31 +157,6 @@ body {
     margin-bottom: 0;
   }
   
-  .projects {
-    padding: 2rem;
-  }
-  
-  .projects li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .projects li:last-child {
-    margin-bottom: 0;
-  }
-  
-  .projects a {
-    color: #444;
-    text-decoration: none;
-    border-bottom: 2px solid #444;
-    transition: border-bottom-color 0.2s ease-in-out;
-    font-weight: bold;
-  }
-  
-  .projects a:hover {
-    border-bottom-color: #222;
-  }
-  
-  /* Style the skills section */
   .skills {
     padding: 2rem;
   }
@@ -192,20 +168,6 @@ body {
   .skills li:last-child {
     margin-bottom: 0;
   }
-  
-  /* Style the volunteer section */
-  .volunteer {
-    padding: 2rem;
-  }
-  
-  .volunteer li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .volunteer li:last-child {
-    margin-bottom: 0;
-  }
-
 
 
 @media screen and (max-width: 760px){
