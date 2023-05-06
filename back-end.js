@@ -1,22 +1,23 @@
-const server = require('http').createServer(handler)
-const io = require('socket.io')(server) //wrap server app in socket io capability
-const fs = require('fs') //file system to server static files
-const url = require('url'); //to parse url strings
-const PORT = process.env.PORT || 3000 //useful if you want to specify port through environment variable
+const express = require('express');
+const app = express();
+const port = 3000;
 
-const ROOT_DIR = 'html'
+// Parse incoming request bodies (form data) in JSON format
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-const MIME_TYPES = {
-    'css': 'text/css',
-    'gif': 'image/gif',
-    'htm': 'text/html',
-    'html': 'text/html',
-    'ico': 'image/x-icon',
-    'jpeg': 'image/jpeg',
-    'jpg': 'image/jpeg',
-    'js': 'application/javascript',
-    'json': 'application/json',
-    'png': 'image/png',
-    'svg': 'image/svg+xml',
-    'txt': 'text/plain'
-  }
+// POST route for form submission
+app.post('/submit', (req, res) => {
+  // Handle the form submission here
+  // Access form data from req.body
+  const { name, email, message } = req.body;
+  // Perform any necessary server-side processing or database operations
+  
+  // Send a response back to the client
+  res.send('Form submitted successfully!');
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
