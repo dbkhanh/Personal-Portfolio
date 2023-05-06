@@ -68,6 +68,12 @@ nav a:hover{
     line-height: 1.5;
 }
 
+.column-left p1{
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
 button{
     padding: 1rem 3rem;
     font-size: 1rem;
