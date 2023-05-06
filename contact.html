@@ -11,7 +11,7 @@
   <body>
     <nav>
       <div class="logo">
-        <img src="./Favicon.png" class="hero-in" />
+        <img src="./Favicon.png" class="hero-in"  style = "width: 25px; height: auto;"/>
         ANNE
       </div>
       <div class="nav-items">
@@ -21,36 +21,44 @@
       </div>
     </nav>
     <div class="line"></div> 
-    
-    <section class="info">
-        <div class="hero-container">
-            <div class="column-right">
-                <img src="p2.jpg" style="width: auto; height: 290px;">
-            </div>
-            <div class="column-left">
-                    <li> D.O.B:     24-02-2003</li>
-                    <li> Phone:     (+1) 343-297-2394</li>
-                    <li> Address:   19 Overlake Dr, Nepean, ON, K2E 5V2</li>
-                    <li> E-mail:    db2.khanh@gmail.com</li>
-            </div>
-        </div>
-    </section>
 
-    <section class="hero">
-      <div class="hero-container">
-        <div class="column-left">
-          <h1>Contact Anne</h1>
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
+    <header style="background-color: black;">
+        <h1 class="title" style="color: white;">CONTACT</h1>
+    </header>
+
+    <section class="info">
+        <div class="hero-container" style="padding-top: 0;">
+            <div class="column-right">
+                <img src="p2.jpg" style="width: auto; height: 200px; border-radius: 50%;">
+            </div>
+            <div class="column-left" style="font-size: 1.5rem;">
+                    <li> E-mail:    db2.khanh@gmail.com</li>
+                    <li> Phone:     (+1) 343-297-2394</li>
+                    <li> Github:    https://github.com/dbkhanh</li>
+                    <li> Linkedln:  https://www.linkedin.com/in/bao-khanh-dang-06792a262/</li>
+            </div>
         </div>
     </section>
+    <hr>
+    <section class="hero">
+          <div class="column-left">
+            <h4 class="subtitle" style="text-align: center; padding-top: 20px; text-decoration: underline; font-weight: bold;">REACH ME HERE</h4>
+            <form class="column-left" style = "padding-bottom: 20px;">
+              <div class="form-column">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
+              </div>
+              <div class="form-column">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <div class="form-column">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+            </div>
+      </section>
   </body>
 </html>

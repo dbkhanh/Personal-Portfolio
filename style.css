@@ -128,53 +128,69 @@ body {
     line-height: 1.5;
     color: #444;
     background-color: #f9f9f9;
-  }
-  
-  header {
+}
+
+header {
     padding: 2rem;
     background-color: #fdcc84;
     color: #fff;
     text-align: center;
-  }
-  
-  .title {
+}
+
+.title {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-  }
-  
-  .subtitle {
+}
+
+.subtitle {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-  }
+}
 
-  .education {
+.education {
     padding: 2rem;
-  }
-  
-  .education li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .education li:last-child {
-    margin-bottom: 0;
-  }
-  
-  .skills {
-    padding: 2rem;
-  }
-  
-  .skills li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .skills li:last-child {
-    margin-bottom: 0;
-  }
+}
 
+.education li {
+    margin-bottom: 0.5rem;
+}
+
+.education li:last-child {
+    margin-bottom: 0;
+}
+
+.skills {
+    padding: 2rem;  
+}
+
+.skills li {
+    margin-bottom: 0.5rem;
+}
+
+.skills li:last-child {
+    margin-bottom: 0;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 5px;
+}
 
 @media screen and (max-width: 760px){
     .hero-container{
