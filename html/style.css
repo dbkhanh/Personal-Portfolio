@@ -43,9 +43,18 @@ nav a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 95vh;
-    /* padding: 3rem calc((100vw - 1300px)/2); */
+    padding: 3rem calc((100vw - 1300px)/2);
     margin-bottom: 20px;
     margin-top: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .column-left{
@@ -74,13 +83,15 @@ nav a:hover{
     line-height: 1.5;
 }
 
-button{
+.button{
     padding: 1rem 3rem;
     font-size: 1rem;
     color: #fdcc84;
     background-color: black;
     cursor: pointer;
     border-radius: 50px;
+    text-decoration: none; /* Remove underline for anchor tag */
+    display: inline-block; /* Adjust display property to match a button */
 }
 
 button:hover{
