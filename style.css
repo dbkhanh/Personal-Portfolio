@@ -38,11 +38,12 @@ nav a:hover{
     background: #fdcc84;
 }
 
+
 .hero-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 95vh;
-    padding: 3rem calc((100vw - 1300px)/2);
+    /* padding: 3rem calc((100vw - 1300px)/2); */
     margin-bottom: 20px;
     margin-top: 0;
 }
@@ -96,7 +97,6 @@ button:hover{
 img{
     height: 400px;
     width: auto;
-    border-radius: 50%;
 }
 
 .logo-image{
@@ -144,7 +144,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
   }
-  
+
   .education {
     padding: 2rem;
   }
