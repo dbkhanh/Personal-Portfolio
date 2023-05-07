@@ -1,6 +1,6 @@
 # Website Builder
 
-I built a simple website in 10 minutes using HTML and CSS.
+I built a personal simple website using HTML and CSS.
 
 ## Description
 
