@@ -15,7 +15,6 @@ nav{
     padding: 0rem calc((100vw - 1300px) / 2);
 }
 
-
 .logo{
     color: black;
     font-size: 1.5rem;
@@ -37,7 +36,6 @@ nav a:hover{
 .hero{
     background: #fdcc84;
 }
-
 
 .hero-container{
     display: grid;
@@ -90,8 +88,8 @@ nav a:hover{
     background-color: black;
     cursor: pointer;
     border-radius: 50px;
-    text-decoration: none; /* Remove underline for anchor tag */
-    display: inline-block; /* Adjust display property to match a button */
+    text-decoration: none; 
+    display: inline-block; 
 }
 
 button:hover{
