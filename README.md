@@ -36,3 +36,5 @@ This project demonstrates how to quickly build a basic website using HTML and CS
 
 Contributions are welcome! If you have any suggestions or improvements, please submit a pull request. For major changes, please open an issue first to discuss the changes.
 
+## Additional source for css styling: 
+https://www.codavilla.com/posts/i-built-a-website-in-10-minutes-using-html-and-css
