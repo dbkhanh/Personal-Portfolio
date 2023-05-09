@@ -84,6 +84,13 @@ nav a:hover{
     line-height: 1.5;
 }
 
+.p1{
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    position: center;
+}
+
 .button{
     padding: 1rem 3rem;
     font-size: 1rem;
@@ -175,6 +182,7 @@ header {
 .education li:last-child {
     margin-bottom: 0;
 }
+
 .skills li {
     margin-bottom: 0.5rem;
 }
@@ -195,7 +203,7 @@ textarea {
 }
 
 .background-img {
-    display: block;
+    position: absolute;
     top: 225px;
     left: 0;
     width: 100%;
@@ -206,6 +214,11 @@ textarea {
 .icon-image {
     width: 50px;
     height: 50px;
+}
+
+.languange-image{
+    width: 150px;
+    height: auto;
 }
 
 .course-content {
@@ -224,32 +237,6 @@ textarea {
   margin-bottom: 5px;
 }
 
-.centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width:80%
-}
-
-.centered-text p {
-    font-size: 24px;
-    color: white;
-    opacity: 0;
-    animation: fadeAnimation 1s ease-in-out forwards;
-}
-
-@keyframes fadeAnimation{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
 @media screen and (max-width: 760px){
     .hero-container{
         grid-template-columns: 1fr;
@@ -257,9 +244,5 @@ textarea {
 
     .container{
         grid-template-columns: 1fr;
-    }
-
-    .centered-text {
-        width: 90%; /* Adjust the width for smaller screens */
     }
 }
