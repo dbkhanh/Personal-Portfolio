@@ -42,15 +42,14 @@ nav a:hover{
     color: white;
 }
 
-/* .hero{
+.hero{
     background: #fdcc84;
-} */
+}
 
 .hero-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 95vh;
-    padding: 3rem calc((100vw - 1300px)/2);
+    height: 100vh;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -122,11 +121,6 @@ img{
     margin-right: 10px;
 }
 
-.title {
-    font-size: 2em;
-    color: #333;
-}
-
 .line {
     border-top: 1px solid black; 
 }
@@ -160,34 +154,9 @@ header {
     letter-spacing: 0.1rem;
 }
 
-.education {
-    padding: 2rem;
-}
-
-.education li {
-    margin-bottom: 0.5rem;
-}
-
-.education li:last-child {
-    margin-bottom: 0;
-}
-.skills li {
-    margin-bottom: 0.5rem;
-}
-
-.skills li:last-child {
-    margin-bottom: 0;
-}
-
 label {
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 5px;
 }
 
 .background-img {
@@ -227,7 +196,7 @@ textarea {
     transform: translate(-50%, -50%);
     text-align: center;
     width:80%
-}
+} 
 
 .centered-text p {
     font-size: 24px;
@@ -305,7 +274,18 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .centered-text {
-        width: 90%; /* Adjust the width for smaller screens */
+    .centered-text p{
+        font-size: 1rem; /* Adjust the width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .centered-text p{
+        font-size: 0.75rem;
     }
 }
