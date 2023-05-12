@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'html')));
 
 // Route handler for the homepage
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'html', 'index.html'));
+  res.sendFile(path.join(__dirname, 'html', 'home.html'));
 });
 
 const port = 3000;
