@@ -28,7 +28,7 @@ This project demonstrates how to quickly build a basic website using HTML and CS
 
 ## Usage
 
-1. Open the `index.html` file in a web browser.
+1. Open the `home.html` file in a web browser.
 2. Customize the content of the website by modifying the HTML and CSS files.
 3. Save your changes and refresh the browser to see the updated website.
 

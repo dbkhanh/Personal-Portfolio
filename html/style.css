@@ -49,7 +49,7 @@ nav a:hover{
 .hero-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: 85vh;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -277,6 +277,13 @@ label {
     .centered-text p{
         font-size: 1rem; /* Adjust the width for smaller screens */
     }
+
+    .column-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -287,5 +294,13 @@ label {
 
     .centered-text p{
         font-size: 0.75rem;
+    }
+
+    
+    .column-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem 2rem;
     }
 }
