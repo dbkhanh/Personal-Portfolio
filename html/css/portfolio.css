@@ -1,0 +1,66 @@
+.projects {
+    background-color: black;
+    padding-bottom: 50px;
+    margin-top: -20px;
+}
+
+.project-section {
+    margin: 20px 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.project-section p {
+    text-indent: 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: white;
+    text-align: left;
+}
+
+.resume-section {
+    margin: 20px 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.resume-section p {
+    text-indent: 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: white;
+    text-align: left;
+}
+
+.course-content {
+    margin-bottom: 20px;
+}
+  
+.course-content h2 {
+    margin-bottom: 10px;
+}
+
+.course-content ul {
+    margin-bottom: 15px;
+}
+
+.course-content li {
+    margin-bottom: 5px;
+}
+  

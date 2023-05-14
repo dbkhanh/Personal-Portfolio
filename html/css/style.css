@@ -42,18 +42,6 @@ nav a:hover{
     color: white;
 }
 
-.hero{
-    background: #fdcc84;
-}
-
-.hero-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 85vh;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -159,34 +147,10 @@ label {
     margin-bottom: 5px;
 }
 
-.background-img {
-    display: block;
-    top: 225px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
 
 .icon-image {
     width: 50px;
     height: 50px;
-}
-
-.course-content {
-  margin-bottom: 20px;
-}
-
-.course-content h2 {
-  margin-bottom: 10px;
-}
-
-.course-content ul {
-  margin-bottom: 15px;
-}
-
-.course-content li {
-  margin-bottom: 5px;
 }
 
 .centered-text {
@@ -215,55 +179,7 @@ label {
     }
 }
 
-.projects {
-    background-color: black;
-    padding-bottom: 50px;
-    margin-top: -20px;
-}
 
-.project-section {
-    margin: 20px 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.project-section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.project-section p {
-    text-indent: 50px;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    color: white;
-    text-align: left;
-}
-
-.resume-section {
-    margin: 20px 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.resume-section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.resume-section p {
-    text-indent: 50px;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    color: white;
-    text-align: left;
-}
   
 @media screen and (max-width: 760px){
     .hero-container{
@@ -274,8 +190,13 @@ label {
         grid-template-columns: 1fr;
     }
 
-    .centered-text p{
-        font-size: 1rem; /* Adjust the width for smaller screens */
+    .column-left h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .column-left p{
+        font-size: 1rem; 
+        text-align: center;
     }
 
     .column-right{
@@ -286,7 +207,7 @@ label {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .contact-img{
         width: 100%;
         height: auto;
@@ -296,11 +217,23 @@ label {
         font-size: 0.75rem;
     }
 
-    
-    .column-right{
+    nav{
+        height: 80px;
+        background: #fdcc84;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 0rem 2rem;
+        padding: 0rem calc((100vw - 1300px) / 2);
+    }
+
+}
+
+@media screen and (min-width: 761px) {
+    .hero-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 85vh;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }
