@@ -183,7 +183,7 @@ img{
     -webkit-mask-composite: destination-out;
     mask-composite: exclude,add,add,add,add,add,add,add,add;
     -webkit-mask-repeat: no-repeat;
-    animation: l3 3s infinite ;
+    animation: l3 1s infinite ;
   }
   .loader:before {
     content: "";
