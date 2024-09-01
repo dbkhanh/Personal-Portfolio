@@ -12,18 +12,51 @@
         <div class="logo">
             <span class="logo-text">ANNE</span>
         </div>
-        <div class="nav-items">
+        <div class="nav-items"> 
             <a href="home.html"><strong>Home</strong></a>
             <a href="portfolio.html"><strong>Portfolio</strong></a>
-            <a href="./resume/Resume_W25.pdf"><strong>Resume</strong></a>
+            <a href="./resume/Resume_W25.pdf" target="_blank"><strong>Resume</strong></a>
             <a href="about.html"><strong>About Me</strong></a>
         </div>
     </nav>
 
+    <div style="background: linear-gradient(180deg, rgb(84, 1, 1), black); padding-bottom: 30px;">
+        <h1 style="padding-top: 100px;">Education</h1>
+        <div class="card">
+            <img src="./images/carleton.png" class="school-logo">
+            <div class="education">
+                <h2>Carleton University</h2>
+                <h3>Sep 2021 - May 2026</h3>
+                <p><em>Bachelor of Computer Science</em><p>
+                <div style="padding-top: 20px;">
+                    <p>GPA: 3.8/4.0</p>
+                    <p>Received the Entrance International Award of Excellence and on Dean’s list since 2021.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div>
-        <h1 style="padding-top: 100px;">Experience</h1>
+        <h1>Experience</h1>
         <section class="timeline">
             <div class="container">
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                        <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
+                    </div>
+                    <div class="timeline-content js--fadeInRight">
+                        <h2>Software Engineer Intern</h2>
+                        <h3>KMS Healthcare</h3>
+                        <p class="date">Jun 2024 - Sep 2024</p>
+                        <ul class="job-details">
+                            <li>Designed with TypeScript, Bootstrap, and JSX for UI.</li>
+                            <li>Used Miniconda, Docker, and Poetry for local dev setup, improving deployment speed.</li>
+                            <li>Conducted research for generative AI projects.</li>
+                        </ul>
+                    </div>
+                </div>         
+
                 <div class="timeline-item">
                     <div class="timeline-img">
                         <img src="./images/intega.png" alt="Intega IT" class="company-logo">
@@ -39,22 +72,7 @@
                         </ul>
                     </div>
                 </div> 
-                
-                <div class="timeline-item">
-                    <div class="timeline-img">
-                        <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
-                    </div>
-                    <div class="timeline-content js--fadeInRight">
-                        <h2>Software Engineer Intern</h2>
-                        <h3>KMS Healthcare</h3>
-                        <p class="date">Jun 2024 - Sep 2024</p>
-                        <ul class="job-details">
-                            <li>Designed with TypeScript, Bootstrap, and JSX for UI.</li>
-                            <li>Used Miniconda, Docker, and Poetry for local dev setup, improving deployment speed.</li>
-                            <li>Conducted research for generative AI projects.</li>
-                        </ul>
-                    </div>
-                </div>           
+                           
             </div>
         </section>
     </div>
@@ -135,48 +153,37 @@
             <div style="display: flex; direction: row; justify-content: center;">
                 <h2>AED Simulation</h2>
             </div>
-            <div style="display: flex; direction: row; margin: 30px;">
-                <img src="./images/aed.png" style="display:flex; justify-content: center; width: 50%; height: auto;">
+            <div class="card">
+                <img src="./images/aed.png">
                 <div>
                     <p style="padding: 20px;">
                         This project is a simulation of an Automated External Defibrillator (AED) interface designed to train individuals in the proper
                          use of an AED during emergency situations. The simulation provides an interactive environment where users can practice the steps necessary
                           to assist someone experiencing sudden cardiac arrest.
                     </p style="padding: 20px;">
-                    <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="button">Click here</a>
+                    <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="button">Source code</a>
                 </div>
             </div>
         </div>
 
-        <div class="resume-section">
+        <div class="project-section">
             <div style="display: flex; direction: row; justify-content: center;">
                 <h2>Tic-Tac-Toe</h2>
             </div>
-            <div style="display: flex; direction: row; margin: 30px;">
+            <div class="card">
                 <div>
                     <p style="padding: 20px;">
                         Tic-tac-toe game using Java, incorporating OOP principles to ensure a user-friendly and interactive experience.
                 By leveraging Java's core concepts, including classes, objects, and inheritance, I carefully designed the structure and functionality of the game.
                 Additionally, I utilized Java's Swing library to implement a graphical user interface (GUI). 
                     </p style="padding: 20px;">
-                    <a href="https://github.com/dbkhanh/X-O-Game" target="_blank" class="button">Click here</a>
+                    <a href="https://github.com/dbkhanh/X-O-Game" target="_blank" class="button">Source code</a>
                 </div>
-                <img src="./images/xo.png" style="display:flex; justify-content: center; width: 35%; height: auto;">
+                <img src="./images/xo.png">
 
             </div>
         </div>
 
-        <div class="resume-section">
-            <div style="display: flex; direction: row; justify-content: center;">
-                <h2>Personal Resume</h2>
-            </div>
-            <p>
-                I have created a personal resume to showcase my skills, experiences, and qualifications. 
-                This resume highlights my educational background, including my studies in computer science and algorithm development at Carleton University.
-                It also outlines my proficiency in various programming languages, such as C++, Java, and JavaScript, 
-                along with my familiarity with web development technologies like HTML, CSS, and frameworks like React.js.
-            </p>
-        </div>
     </section>
 
     <div class="navb">
@@ -201,6 +208,14 @@
         </a>
     </div>
     
+    <script>
+        document.querySelectorAll('.course-card h2').forEach(header => {
+            header.addEventListener('click', function () {
+                const courseCard = this.parentElement;
+                courseCard.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
