@@ -12,29 +12,28 @@ This project demonstrates how to quickly build a basic website using HTML and CS
 - Responsive layout
 - Customizable content
 
-## Installation
+## Getting started
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/website-builder.git
+    git clone https://github.com/dbkhanh/Personal-Portfolio.git
     ```
 
-2. Navigate to the project directory:
+2. Run the project
 
     ```bash
-    cd website-builder
+    npm start
     ```
 
-## Usage
+## Deployment to Heroku
 
-1. Open the `home.html` file in a web browser.
-2. Customize the content of the website by modifying the HTML and CSS files.
-3. Save your changes and refresh the browser to see the updated website.
-
-## Contributing
-
-Contributions are welcome! If you have any suggestions or improvements, please submit a pull request. For major changes, please open an issue first to discuss the changes.
+1. Start command to package.json
+2. Listen on process.env.PORT (for this application, it should be 3000)
+3. Provision with `heroku create`
+4. Deploy with github using `git push heroku main`
+5. Node.js detected automatically
+6. Application is live on `https://annedang2402.herokuapp.com/`
 
 ## Additional source for css styling: 
 https://www.codavilla.com/posts/i-built-a-website-in-10-minutes-using-html-and-css
