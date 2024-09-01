@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang=" en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Home</title>
+        <link rel="stylesheet" href="./css/sheet.css"/>
+        <link rel="icon" href=".\images\Favicon.png" sizes="32x32" type="image/png">
+    </head>
+
+    <body>
+        <nav>
+            <div class = "logo">
+                <span class="logo-text">ANNE</span>
+            </div>
+            <div class="nav-items">
+                <a href="home.html"><strong>Home</strong></a>
+                <a href="portfolio.html"><strong>Portfolio</strong></a>
+                <a href="./resume/Resume_W25.pdf"><strong>Resume</strong></a>
+                <a href="about.html"><strong>About Me</strong></a>
+            </div>
+        </nav>
+
+        <section>
+            <div class="hero-container">
+                <div class="column-left">
+                    <img src="./images/starting.jpg" alt="illustration" style="border-radius: 20%; border: 1px solid lightgray;">
+                </div>
+                <div class="column-right">
+                    <h1>ANNE DANG</h1>
+                    <p>Welcome to Anne's personal space!</p>
+                    <p> I am a third-year Carleton University student pursuing a Bachelor's degree in Computer Science with
+                        a specialization in Software Engineering and a minor degree in Mathematics.
+                    </p> 
+                    <p>I am eager to experience and learn!</p>
+                    <a href="portfolio.html">
+                        <button>Let's go</button>
+                    </a>
+                </div>
+               
+            </div>
+        </section>
+
+        <div class="loader-overlay"></div>
+        <div id="loading" class="loader"></div>
+
+        <!-- <div class="navb">
+            <a href = "mailto:db2.khanh@gmail.com">
+                <img src = ".\images\mail.png" class="icon-image">
+            </a>
+    
+            <a href = "https://www.facebook.com/profile.php?id=100013723860041">
+                <img src = ".\images\fbicon.png" class="icon-image">
+            </a>
+    
+            <a href = "https://instagram.com/anne.dang2402?igshid=ZGUzMzM3NWJiOQ==">
+                <img src = ".\images\instaicon.jpg" class="icon-image">
+            </a>
+    
+            <a href = "https://www.linkedin.com/in/anne-dang-06792a262/">
+                <img src = ".\images\linkedin.png" class="icon-image">
+            </a>
+    
+            <a href = "https://github.com/dbkhanh">
+                <img src = ".\images\git.png" class="icon-image">
+            </a>
+        </div> -->
+        
+    </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var button = document.querySelector('a[href="portfolio.html"] button');
+            var loaderOverlay = document.querySelector('.loader-overlay');
+            var loader = document.getElementById('loading');
+            
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); 
+                loaderOverlay.style.display = 'block';
+                loader.style.display = 'inline-flex'; 
+    
+                setTimeout(function () {
+                    window.location.href = 'portfolio.html'; 
+                }, 1000); 
+            });
+        });
+    </script>
+    
+</html>
