@@ -13,18 +13,21 @@
             <div class = "logo">
                 <span class="logo-text">ANNE</span>
             </div>
-            <div class="nav-items">
+            <div class="nav-items" id="nav-items">
                 <a href="home.html"><strong>Home</strong></a>
                 <a href="portfolio.html"><strong>Portfolio</strong></a>
                 <a href="./resume/Resume_W25.pdf"><strong>Resume</strong></a>
                 <a href="about.html"><strong>About Me</strong></a>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+              ☰
             </div>
         </nav>
 
         <section>
             <div class="hero-container">
                 <div class="column-left">
-                    <img src="./images/starting.jpg" alt="illustration" style="border-radius: 20%; border: 1px solid lightgray;">
+                    <img src="./images/starting.jpg" alt="illustration" style="display: flex; border-radius: 20%; border: 1px solid lightgray;">
                 </div>
                 <div class="column-right">
                     <h1>ANNE DANG</h1>
@@ -85,5 +88,21 @@
             });
         });
     </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const menuIcon = document.getElementById('menu-icon');
+          const navItems = document.getElementById('nav-items');
+      
+          menuIcon.addEventListener('click', function () {
+              if (navItems.classList.contains('expanded')) {
+                  navItems.classList.remove('expanded');
+              } else {
+                  navItems.classList.add('expanded');
+              }
+          });
+      });
+    </script>
+  
     
 </html>

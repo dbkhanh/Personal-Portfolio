@@ -35,6 +35,50 @@ nav {
   z-index: 1000;
 }
 
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+.navb {
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 calc((100vw - 1300px) / 2);
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0 1.5rem;
+}
+
+nav a:hover {
+  color: rgb(237, 203, 155);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items.collapsed {
+  display: none;
+}
+
+
 .timeline {
   position: relative;
   padding: 2rem 0;
@@ -302,7 +346,7 @@ label {
 }
 
 .course-card {
-  background-color: #706363;
+  background-color: #18273b;
   border-radius: 10px;
   padding: 2.5rem;
   width: 30%;
@@ -397,6 +441,34 @@ header {
 .card img {
   display: flex;
   justify-content: center;
-  width: 30%;
-  height: auto;
+  width: auto;
+  height: 70%;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  .nav-items {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background-color: rgb(18, 18, 18);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 1rem;
+  }
+
+  .nav-items a {
+      padding: 1rem 0;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .nav-items.expanded {
+      display: flex;
+  }
 }

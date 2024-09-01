@@ -9,14 +9,17 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
+        <div class = "logo">
             <span class="logo-text">ANNE</span>
         </div>
-        <div class="nav-items"> 
+        <div class="nav-items" id="nav-items">
             <a href="home.html"><strong>Home</strong></a>
             <a href="portfolio.html"><strong>Portfolio</strong></a>
-            <a href="./resume/Resume_W25.pdf" target="_blank"><strong>Resume</strong></a>
+            <a href="./resume/Resume_W25.pdf"><strong>Resume</strong></a>
             <a href="about.html"><strong>About Me</strong></a>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+          ☰
         </div>
     </nav>
 
@@ -50,9 +53,11 @@
                         <h3>KMS Healthcare</h3>
                         <p class="date">Jun 2024 - Sep 2024</p>
                         <ul class="job-details">
-                            <li>Designed with TypeScript, Bootstrap, and JSX for UI.</li>
-                            <li>Used Miniconda, Docker, and Poetry for local dev setup, improving deployment speed.</li>
-                            <li>Conducted research for generative AI projects.</li>
+                            <li>Fine-tuned a Seq2Seq model achieving 80% accuracy.</li>
+                            <li>Integrated API with Qdrant for disease profile generation.</li>
+                            <li>Designed responsive UI with TypeScript, Bootstrap, and JSX.</li>
+                            <li>Automated deployment with Miniconda, Docker and Poetry.</li>
+                            <li>Researched and developed medical GenAI projects.</li>
                         </ul>
                     </div>
                 </div>         
@@ -68,7 +73,7 @@
                         <ul class="job-details">
                             <li>Efficiently resolved over 1400 technical issues in 4 months.</li>
                             <li>Utilized Field Effect, Datto RMM, and Autotask.</li>
-                            <li>Maintained a 95 percent positive feedback rating from end-users.</li>
+                            <li>Maintained a 95% positive feedback rating from end-users.</li>
                         </ul>
                     </div>
                 </div> 
@@ -216,6 +221,21 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.getElementById('menu-icon');
+            const navItems = document.getElementById('nav-items');
+        
+            menuIcon.addEventListener('click', function () {
+                if (navItems.classList.contains('expanded')) {
+                    navItems.classList.remove('expanded');
+                } else {
+                    navItems.classList.add('expanded');
+                }
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
