@@ -83,6 +83,8 @@
                 loader.style.display = 'inline-flex'; 
     
                 setTimeout(function () {
+                    loaderOverlay.style.display = 'none';
+                    loader.style.display = 'none'; 
                     window.location.href = 'portfolio.html'; 
                 }, 1000); 
             });
