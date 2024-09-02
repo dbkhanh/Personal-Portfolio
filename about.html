@@ -9,26 +9,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 
+  <style>
+      .image-container {
+          position: relative;
+          display: inline-block;
+          margin-top: 200px;
+
+      }
+
+      .image-container::before {
+          content: '';
+          position: absolute;
+          top: -10px; 
+          left: -10px; 
+          width: calc(100% + 20px); 
+          height: calc(100% + 20px); 
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.25); 
+          filter: blur(15px);
+          z-index: 1;
+          pointer-events: none;
+      }
+
+      .image-container img {
+          border-radius: 50%;
+          display: block;
+          position: relative;
+          z-index: 2; 
+          width: 200px; 
+          height: 200px; 
+          object-fit: cover;
+          
+      }
+  </style>
+
   <body>
     <nav>
       <div class = "logo">
           <span class="logo-text">ANNE</span>
       </div>
-      <div class="nav-items">
+      <div class="nav-items" id="nav-items">
           <a href="home.html"><strong>Home</strong></a>
           <a href="portfolio.html"><strong>Portfolio</strong></a>
-          <a href="./resume/Resume_W25.pdf"><strong>Resume</strong></a>
+          <a href="./resume/Resume_W25.pdf" target="_blank"><strong>Resume</strong></a>
           <a href="about.html"><strong>About Me</strong></a>
       </div>
-    </nav>
+      <div class="menu-icon" id="menu-icon">
+        ☰
+      </div>
+  </nav>
 
-    <header style="background-color: black;">
-        <h1 class="title" style="color: white;">GET TO KNOW ME</h1>
-    </header>
-
-    <section class="info" style="background-color: black;  padding-top: 50px;">
-        <div>
-          <img src="./images/in3.jpg" class="contact-img">
+    <section class="info">
+        <div style="margin: 50px">
+          <div class="image-container">
+            <img src="./images/in3.jpg" alt="Blurred Image">
+          </div>          
           <p style="padding: 20px; ">
             <strong>Location:</strong> Ottawa, ON<br>
             <strong>Hobby:</strong> Sportify, Gaming, and Programming<br>
@@ -47,26 +82,37 @@
     </section>
 
     <div class="navb">
-      <a href="mailto:db2.khanh@gmail.com">
+      <a href="mailto:db2.khanh@gmail.com" target="_blank">
           <img src="./images/mail.png" class="icon-image white-icon">
       </a>
   
-      <a href="https://www.facebook.com/profile.php?id=100013723860041">
-          <img src="./images/fbicon.png" class="icon-image white-icon">
-      </a>
-  
-      <a href="https://instagram.com/anne.dang2402?igshid=ZGUzMzM3NWJiOQ==">
+      <a href="https://instagram.com/anne.dang2402?igshid=ZGUzMzM3NWJiOQ==" target="_blank">
           <img src="./images/instaicon.jpg" class="icon-image white-icon">
       </a>
   
-      <a href="https://www.linkedin.com/in/annedang2402/">
+      <a href="https://www.linkedin.com/in/annedang2402/" target="_blank">
           <img src="./images/linkedin.png" class="icon-image white-icon">
       </a>
   
-      <a href="https://github.com/dbkhanh">
+      <a href="https://github.com/dbkhanh" target="_blank">
           <img src="./images/git.png" class="icon-image white-icon">
       </a>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.getElementById('menu-icon');
+        const navItems = document.getElementById('nav-items');
+    
+        menuIcon.addEventListener('click', function () {
+            if (navItems.classList.contains('expanded')) {
+                navItems.classList.remove('expanded');
+            } else {
+                navItems.classList.add('expanded');
+            }
+        });
+    });
+  </script>
 
   </body>
 </html>

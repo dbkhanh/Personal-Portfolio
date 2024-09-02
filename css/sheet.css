@@ -9,7 +9,6 @@
 
 body {
     background: linear-gradient(135deg, #fdcc84, #f98484);
-    overflow-x: hidden;
 }
 
 nav {
@@ -34,8 +33,6 @@ nav {
     background: linear-gradient(135deg, #fdcc84, #f98484);
     display: flex;
     position: relative;
-    width: 100vw;
-    height: 100vh;
     padding: 120px;
     justify-content: center;
 }
@@ -280,12 +277,11 @@ img {
     }
 
     img{
-        width: 250px;
-        padding: 20px;
+        width: 70%;
         height: auto;
     }
     .column-right {
-        width: 80%;
+        width: 90%;
         align-items: center;
         justify-content: start;
     }
@@ -295,14 +291,33 @@ img {
     }
 
     .column-right h1{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
+        text-align: center;
+
     }
     .column-right p{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     nav{
         padding: 0 1.5rem;
+    }
+
+    .column-right button {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+        color: #fdcc84;
+        background-color: rgb(18, 18, 18);
+        cursor: pointer;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 370px) {
+    .column-right{
+        width: 100%;
     }
 }
 

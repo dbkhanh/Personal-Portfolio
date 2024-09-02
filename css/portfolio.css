@@ -29,7 +29,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 5rem;
+  padding: 0rem 3rem;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -217,10 +217,6 @@ nav a {
   text-decoration: none;
   color: white;
   padding: 0 1.5rem;
-}
-
-nav a:hover {
-  color: #ddd;
 }
 
 img {

@@ -15,7 +15,7 @@
         <div class="nav-items" id="nav-items">
             <a href="home.html"><strong>Home</strong></a>
             <a href="portfolio.html"><strong>Portfolio</strong></a>
-            <a href="./resume/Resume_W25.pdf"><strong>Resume</strong></a>
+            <a href="./resume/Resume_W25.pdf" target="_blank"><strong>Resume</strong></a>
             <a href="about.html"><strong>About Me</strong></a>
         </div>
         <div class="menu-icon" id="menu-icon">
@@ -156,10 +156,28 @@
     <section class="projects">
         <div class="project-section">
             <div style="display: flex; direction: row; justify-content: center;">
+                <h2>AI Agent</h2>
+            </div>
+            <div class="card">
+                <div>
+                    <p style="padding: 20px;">
+                       AI Agent using Llama tools and Qdrant vector database to find query items based on similarity search.
+                       It also incorporates GenAI model to assist in generating responses. 
+                       If a question falls outside the predefined scope, the agent will utilizes Wikipedia library to provide answers.  
+                    </p style="padding: 20px;">
+                    <a href="https://github.com/dbkhanh/BaliTravel_FoodGuidance_Agent" target="_blank" class="button">Source code</a>
+                </div>
+                <img src="./images/agent.png" style="width: 40%;">
+
+            </div>
+        </div>
+
+        <div class="project-section">
+            <div style="display: flex; direction: row; justify-content: center;">
                 <h2>AED Simulation</h2>
             </div>
             <div class="card">
-                <img src="./images/aed.png">
+                <img src="./images/aed.png" style="width: 40%;">
                 <div>
                     <p style="padding: 20px;">
                         This project is a simulation of an Automated External Defibrillator (AED) interface designed to train individuals in the proper
@@ -184,7 +202,7 @@
                     </p style="padding: 20px;">
                     <a href="https://github.com/dbkhanh/X-O-Game" target="_blank" class="button">Source code</a>
                 </div>
-                <img src="./images/xo.png">
+                <img src="./images/xo.png" style="width: 30%;">
 
             </div>
         </div>
@@ -192,26 +210,23 @@
     </section>
 
     <div class="navb">
-        <a href="mailto:db2.khanh@gmail.com">
+        <a href="mailto:db2.khanh@gmail.com" target="_blank">
             <img src="./images/mail.png" class="icon-image white-icon">
         </a>
     
-        <a href="https://www.facebook.com/profile.php?id=100013723860041">
-            <img src="./images/fbicon.png" class="icon-image white-icon">
-        </a>
-    
-        <a href="https://instagram.com/anne.dang2402?igshid=ZGUzMzM3NWJiOQ==">
+        <a href="https://instagram.com/anne.dang2402?igshid=ZGUzMzM3NWJiOQ==" target="_blank">
             <img src="./images/instaicon.jpg" class="icon-image white-icon">
         </a>
     
-        <a href="https://www.linkedin.com/in/annedang2402/">
+        <a href="https://www.linkedin.com/in/annedang2402/" target="_blank">
             <img src="./images/linkedin.png" class="icon-image white-icon">
         </a>
     
-        <a href="https://github.com/dbkhanh">
+        <a href="https://github.com/dbkhanh" target="_blank">
             <img src="./images/git.png" class="icon-image white-icon">
         </a>
     </div>
+  
     
     <script>
         document.querySelectorAll('.course-card h2').forEach(header => {
