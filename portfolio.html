@@ -23,10 +23,12 @@
         </div>
     </nav>
 
-    <div style="background: linear-gradient(180deg, rgb(84, 1, 1), black); padding-bottom: 30px;">
+    <div class="edu-back">
         <h1 style="padding-top: 100px;">Education</h1>
         <div class="card">
-            <img src="./images/carleton.png" class="school-logo">
+            <div>
+                <img src="./images/carleton.png" class="school-logo">
+            </div>
             <div class="education">
                 <h2>Carleton University</h2>
                 <h3>Sep 2021 - May 2026</h3>
@@ -43,46 +45,45 @@
     <div>
         <h1>Experience</h1>
         <section class="timeline">
-            <div class="container">
-                <div class="timeline-item">
-                    <div class="timeline-img">
-                        <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
-                    </div>
-                    <div class="timeline-content js--fadeInRight">
-                        <h2>Software Engineer Intern</h2>
-                        <h3>KMS Healthcare</h3>
-                        <p class="date">Jun 2024 - Sep 2024</p>
-                        <ul class="job-details">
-                            <li>Fine-tuned a Seq2Seq model achieving 80% accuracy.</li>
-                            <li>Integrated API with Qdrant for disease profile generation.</li>
-                            <li>Designed responsive UI with TypeScript, Bootstrap, and JSX.</li>
-                            <li>Automated deployment with Miniconda, Docker and Poetry.</li>
-                            <li>Researched and developed medical GenAI projects.</li>
-                        </ul>
-                    </div>
-                </div>         
+                <ul>
+                    <li>
+                        <!-- <div class="timeline-img">
+                            <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
+                        </div> -->
+                        <div class="timeline-item">
+                            <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
+                            <h2 style="padding-top: 10px;">KMS Healthcare</h2>
+                            <h3>Software Engineer Intern</h3>
+                            <p class="date-p">Jun 2024 - Sep 2024</p>
+                            <p>- Fine-tuned a Seq2Seq model achieving 80% accuracy.</p>
+                            <p>- Integrated API with Qdrant for disease profile generation.</p>
+                            <p>- Designed responsive UI with TypeScript, Bootstrap, and JSX.</p>
+                            <p>- Automated deployment with Miniconda, Docker and Poetry.</p>
+                            <p>- Researched and developed medical GenAI projects.</p>
+                        </div>
+                    </li>         
 
-                <div class="timeline-item">
-                    <div class="timeline-img">
-                        <img src="./images/intega.png" alt="Intega IT" class="company-logo">
-                    </div>
-                    <div class="timeline-content js--fadeInLeft">
-                        <h2>L1 Desktop Support Specialist</h2>
-                        <h3>Intega IT</h3>
-                        <p class="date">Sep 2023 - Dec 2023</p>
-                        <ul class="job-details">
-                            <li>Efficiently resolved over 1400 technical issues in 4 months.</li>
-                            <li>Utilized Field Effect, Datto RMM, and Autotask.</li>
-                            <li>Maintained a 95% positive feedback rating from end-users.</li>
-                        </ul>
-                    </div>
-                </div> 
-                           
-            </div>
-        </section>
+                    <li>
+                        <!-- <div class="timeline-img">
+                            <img src="./images/intega.png" alt="Intega IT" class="company-logo">
+                        </div> -->
+                        <div class="timeline-item">
+                            <img src="./images/intega.png" alt="Intega IT" class="company-logo">
+                            <h2>Intega IT</h2>
+                            <h3>L1 Desktop Support Specialist </h3>
+                            <p class="date-p">Sep 2023 - Dec 2023</p>
+                            <p>- Efficiently resolved over 1400 technical issues in 4 months.</p>
+                            <p>- Utilized Field Effect, Datto RMM, and Autotask.</p>
+                            <p>- Maintained a 95% positive feedback rating from end-users.</p>
+                        </div>
+                    </li> 
+                </ul>
+            </section>
     </div>
         
     
+
+
     <header>
         <h1>What I have learned</h1>
     </header>
@@ -169,7 +170,7 @@
                         <a href="https://github.com/dbkhanh/BaliTravel_FoodGuidance_Agent" target="_blank" class="button">Source code</a>
                     </div>
                 </div>
-                <img src="./images/agent.png" style="width: 40%; padding: 20px;">
+                <img src="./images/agent.png" class="project-img">
 
             </div>
         </div>
@@ -179,7 +180,7 @@
                 <h2>Museum of Flower</h2>
             </div>
             <div class="card">
-                <img src="./images/museum.png" style="width: 40%;padding: 20px;">
+                <img src="./images/museum.png"  class="project-img">
                 <div>
                     <p style="padding: 20px;">
                         User-friendly website for booking and managing museum tickets, 
@@ -208,7 +209,7 @@
                         <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="button">Source code</a>
                     </div>
                 </div>
-                    <img src="./images/aed.png" style="width: 40%; padding: 20px;">
+                      <img src="./images/aed.png" class="project-img">
             </div>
         </div>
 
@@ -217,7 +218,7 @@
                 <h2>Tic-Tac-Toe</h2>
             </div>
             <div class="card">
-                <img src="./images/xo.png" style="width: 30%; height: auto; padding: 20px;">
+                <img src="./images/xo.png" class="project-img" style="width: 30%; height: auto;">
                 <div>
                     <p style="padding: 20px;">
                         Tic-tac-toe game using Java, incorporating OOP principles to ensure a user-friendly and interactive experience.
@@ -275,7 +276,44 @@
             });
         });
     </script>
+    <script>
+        (function() {
+
+            'use strict';
+
+            // define variables
+            var items = document.querySelectorAll(".timeline li");
+
+            // check if an element is in viewport
+            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+            function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+            }
+
+            function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+                }
+            }
+            }
+
+            // listen for events
+            window.addEventListener("load", callbackFunc);
+            window.addEventListener("resize", callbackFunc);
+            window.addEventListener("scroll", callbackFunc);
+
+            })();
+    </script>
     
 </body>
 
 </html>
+
+

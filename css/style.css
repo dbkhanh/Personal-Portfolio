@@ -7,11 +7,9 @@
     font-family: 'Roboto Slab', serif;
 }
 .info {
-    height: 90vh;
     background-color: black;
     align-items: center;
     display: flex;
-    padding: 50px;
 }
 
 nav {
@@ -23,7 +21,7 @@ nav {
     align-items: center;
     padding: 0rem 3rem;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
 }
 
@@ -41,7 +39,6 @@ align-items: center;
     background-color: rgb(18, 18, 18);
     position: relative;
     width: 100%;
-    margin-top: 100px;
     bottom:0;
 }
 
@@ -130,7 +127,15 @@ label {
     filter: invert(1) brightness(100%);
 }
 
-/* Responsive Styles */
+.info .description{
+    text-align: left; 
+    text-indent: 50px; 
+    padding-left: 20%; 
+    padding-right: 20%; 
+    padding-bottom: 50px; 
+    padding-top: 10px;
+}
+
 @media (max-width: 1000px) {
     .nav-items {
         display: none;
@@ -154,6 +159,17 @@ label {
   
     .nav-items.expanded {
         display: flex;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .info .description{
+        text-align: left; 
+        text-indent: 50px; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+        padding-bottom: 50px; 
+        padding-top: 10px;
     }
   }
   
