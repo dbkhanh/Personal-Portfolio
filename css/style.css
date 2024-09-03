@@ -96,7 +96,6 @@ header {
     background-color: #fdcc84;
     color: #fff;
     text-align: center;
-    padding-top: 80px;
 }
 
 .title {
@@ -170,6 +169,15 @@ label {
         padding-right: 10px; 
         padding-bottom: 50px; 
         padding-top: 10px;
+    }
+
+    .navb{
+        padding: 0 0;
+    }
+
+    .icon-image {
+        width: 35px;
+        height: 35px;
     }
   }
   

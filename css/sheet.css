@@ -297,6 +297,11 @@ img {
     }
     .column-right p{
         font-size: 0.7rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .column-right button{
+        margin-top: 1.5rem;
     }
 
     nav{
