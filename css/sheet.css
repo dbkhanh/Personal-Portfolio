@@ -35,6 +35,7 @@ nav {
     position: relative;
     padding: 120px;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .navb {
