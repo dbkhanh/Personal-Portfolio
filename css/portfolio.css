@@ -289,9 +289,9 @@ h2{
 
 .projects{
   background: linear-gradient(180deg, black, black, #104345); 
-  padding: 2rem;
   margin: 0 auto;
   padding-top: 0rem;
+  padding-bottom: 2rem;
 }
 
 
@@ -440,6 +440,9 @@ header {
 .project-section{
   padding-left: 5%;
   padding-right: 5%;
+  width: 80%;
+  position: relative;
+  left:10%;
 }
 
 
