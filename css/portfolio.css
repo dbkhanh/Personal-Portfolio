@@ -294,6 +294,12 @@ h2{
   padding-bottom: 2rem;
 }
 
+.project-content{
+  width: 50%;
+  align-items: center;
+  padding: 40px;
+
+}
 
 .course-content {
   margin-bottom: 2rem;
@@ -470,9 +476,13 @@ header {
   .nav-items.expanded {
       display: flex;
   }
+
+  .project-content{
+    width: 100%;
+  }
 }
 
-@media (max-width: 810px){
+@media (max-width: 1000px){
   .card {
     flex-direction: column;
   }
@@ -480,12 +490,6 @@ header {
   .project-section .project-img {
     display: none;
 }
-
-  .card img{
-    width: 40%;
-    height: auto;
-    margin-left: 30%;
-  }
   
   .education{
     width: 100%;
@@ -539,5 +543,9 @@ header {
   
   .navb{
     padding: 0 0;
+  }
+
+  .project-content{
+    width: 100%;
   }
 }
