@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   background-color: #000;
   color: #fff;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -32,7 +32,7 @@ nav {
   align-items: center;
   padding: 0rem 3rem;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -71,18 +71,14 @@ nav a:hover {
   cursor: pointer;
 }
 
-.nav-items {
-  display: flex;
-}
-
 .nav-items.collapsed {
   display: none;
 }
 
+/* Timeline styles preserved (no changes) */
 .timeline ul {
   padding: 50px 0;
 }
-
 .timeline ul li {
   list-style-type: none;
   position: relative;
@@ -91,7 +87,6 @@ nav a:hover {
   padding-top: 50px;
   background: #fff;
 }
-
 .timeline ul li::after {
   content: '';
   position: absolute;
@@ -103,7 +98,6 @@ nav a:hover {
   border-radius: 50%;
   background: inherit;
 }
-
 .timeline ul li div {
   position: relative;
   bottom: 0;
@@ -111,7 +105,6 @@ nav a:hover {
   padding: 15px;
   background: linear-gradient(135deg, #1d1944, #302b63, #2b687abb);
 }
-
 .timeline ul li div::before {
   content: '';
   position: absolute;
@@ -120,71 +113,57 @@ nav a:hover {
   height: 0;
   border-style: solid;
 }
-
 .timeline ul li:nth-child(odd) div {
   left: 45px;
 }
-
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
   border-color: transparent #302c63 transparent transparent;
 }
-
 .timeline ul li:nth-child(even) div {
   left: -439px;
 }
-
 .timeline ul li:nth-child(even) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #204a59;
 }
-
 .timeline-item {
   border-radius: 10px;
 }
-
 .timeline ul li::after {
   transition: background .5s ease-in-out;
 }
-
-.date-p{
+.date-p {
   font: 1.2rem;
   font-style: italic;
   padding-bottom: 5px;
 }
-
 .timeline ul li.in-view::after {
   background: linear-gradient(135deg, #a4ebbd, #7ec8a3, #4da07c);
   box-shadow: 0 2px 5px rgba(34, 114, 72, 0.1);
 }
-
 .timeline ul li div {
   visibility: hidden;
   opacity: 0;
   transition: all .5s ease-in-out;
 }
-
 .timeline ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
-
 .timeline ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
 }
-
 .timeline ul li.in-view div {
   transform: none;
   visibility: visible;
   opacity: 1;
 }
 
-
 .job-details {
   margin-top: 10px;
 }
-
 .job-details li {
   font-size: 0.875rem;
 }
@@ -213,19 +192,6 @@ nav a:hover {
     border-width: 8px 16px 8px 0;
     border-color: transparent #c3d1e1 transparent transparent;
   }
-}
-
-.logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-style: italic;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 0 1.5rem;
 }
 
 img {
@@ -283,22 +249,20 @@ label {
   }
 }
 
-h2{
+h2 {
   font-size: 1.5rem;
 }
 
-.projects{
-  background: linear-gradient(180deg, black, black, #104345); 
+.projects {
+  background: linear-gradient(180deg, black, black, #104345);
   margin: 0 auto;
   padding-top: 0rem;
   padding-bottom: 2rem;
 }
 
-.project-content{
+.project-content {
   width: 50%;
   align-items: center;
-  /* padding: 40px; */
-
 }
 
 @media (min-width: 1024px) {
@@ -364,7 +328,7 @@ h2{
   color: white;
 }
 
-.timeline p{
+.timeline p {
   font-size: 0.7rem;
 }
 
@@ -407,24 +371,20 @@ header {
   color: black;
 }
 
-.icon-image {
-  width: 50px;
-  height: 50px;
-}
-
 .white-icon {
   filter: invert(1) brightness(100%);
 }
 
-.edu-back{
-  background: linear-gradient(180deg, rgb(84, 1, 1), black); 
-  width: 100vw;
+.edu-back {
+  background: linear-gradient(180deg, rgb(84, 1, 1), black);
+  width: 100%;
 }
 
 .education {
-    padding: 5%;
-    width: 40%;
+  padding: 5%;
+  width: 40%;
 }
+
 .school-logo {
   margin-left: 5%;
 }
@@ -444,96 +404,97 @@ header {
   height: auto;
 }
 
-.project-section .project-img{
+.project-section .project-img {
   width: 40%;
   padding: 20px;
 }
 
-.project-section{
+.project-section {
   padding-left: 5%;
   padding-right: 5%;
-  width: 80%;
+  width: 90%;
   position: relative;
-  left:10%;
+  margin: 0 auto;
+  left: 0;
 }
-
 
 @media (max-width: 1000px) {
   .nav-items {
-      display: none;
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      background-color: rgb(18, 18, 18);
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem 1rem;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
   }
 
   .nav-items a {
-      padding: 1rem 0;
+    padding: 1rem 0;
   }
 
   .menu-icon {
-      display: block;
+    display: block;
   }
 
   .nav-items.expanded {
-      display: flex;
+    display: flex;
   }
 
-  .project-content{
+  .project-content {
     width: 100%;
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .card {
     flex-direction: column;
   }
 
   .project-section .project-img {
     display: none;
-}
-  
-  .education{
+  }
+
+  .education {
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
-    align-items: center;;
+    align-items: center;
   }
 
-  .course-card h2{
+  .course-card h2 {
     font-size: 1rem;
     text-align: center;
   }
-  
-  .course-card ul{
+
+  .course-card ul {
     padding-left: 0;
   }
-  .course-card li{
+
+  .course-card li {
     font-size: 0.8rem;
   }
 
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
 
-  h2{
+  h2 {
     font-size: 1.25rem;
   }
 
-  h3{
+  h3 {
     font-size: 1rem;
   }
 
-  p{
+  p {
     font-size: 0.7rem;
   }
 
-  nav{
+  nav {
     padding: 0 1rem;
   }
 
@@ -542,16 +503,16 @@ header {
     height: 35px;
   }
 
-  .button{
+  .button {
     padding: 0.5rem 1rem;
     font-size: 0.7rem;
   }
-  
-  .navb{
+
+  .navb {
     padding: 0 0;
   }
 
-  .project-content{
+  .project-content {
     width: 100%;
   }
 }
