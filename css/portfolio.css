@@ -297,8 +297,14 @@ h2{
 .project-content{
   width: 50%;
   align-items: center;
-  padding: 40px;
+  /* padding: 40px; */
 
+}
+
+@media (min-width: 1024px) {
+  .project-content {
+    padding: 40px;
+  }
 }
 
 .course-content {
