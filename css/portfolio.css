@@ -137,7 +137,7 @@ nav a:hover {
   content: '';
   position: absolute;
   bottom: 7px;
-  right: -15px;
+  right: -15px; 
   border-style: solid;
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #204a59;
@@ -176,22 +176,6 @@ nav a:hover {
   }
   .timeline ul li:nth-child(even) div {
     left: -289px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-  .timeline ul li:nth-child(even) div {
-    left: 45px;
-  }
-  .timeline ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #c3d1e1 transparent transparent;
   }
 }
 
@@ -510,5 +494,28 @@ header {
 
   .project-content {
     width: 100%;
+  }
+}
+
+
+/* FINAL MOBILE FIX – place at bottom */
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    right: auto;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #302c63 transparent transparent
   }
 }
