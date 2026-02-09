@@ -44,28 +44,25 @@
 
     <div>
         <h1>Experience</h1>
-        <section class="timeline">
-                <ul>
+        <section class="timeline" id="timeline">
+                <button type="button" class="timeline-arrow timeline-arrow-prev" aria-label="Previous job" title="Previous job">←</button>
+                <button type="button" class="timeline-arrow timeline-arrow-next" aria-label="Next job" title="Next job">→</button>
+                <div class="timeline-scroll" id="timeline-scroll">
+                <ul class="timeline-track">
                     <li>
-                        <!-- <div class="timeline-img">
-                            <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
-                        </div> -->
+                        <span class="timeline-year">2023</span>
                         <div class="timeline-item">
-                            <img src="./images/searidge.jpg" alt="Searidge Technologies" class="company-logo">
-                            <h2 style="padding-top: 10px;">Searidge Technologies</h2>
-                            <h3>Platform Developer Intern</h3>
-                            <p class="date-p">Jan 2025 - Aug 2025</p>
-                            <p>- Automated Kubernetes deployments using Helm and GitLab CI/CD.</p>
-                            <p>- Integrated Harbor registry with Rancher-managed RKE2 clusters.</p>
-                            <p>- Troubleshot and configured Strimzi Kafka with Keycloak-based OAuth2 authentication.</p>
-                            <p>- Diagnosed and resolved network, storage, and TLS issues across Kubernetes workloads and internal services.</p>
-                            <p>- Centralized platform operations by customizing Rancher UI.</p>
+                            <img src="./images/intega.png" alt="Intega IT" class="company-logo">
+                            <h2>Intega IT</h2>
+                            <h3>L1 Desktop Support Specialist</h3>
+                            <p class="date-p">Sep 2023 - Dec 2023</p>
+                            <p>- Efficiently resolved over 1400 technical issues in 4 months.</p>
+                            <p>- Utilized Field Effect, Datto RMM, and Autotask.</p>
+                            <p>- Maintained a 95% positive feedback rating from end-users.</p>
                         </div>
-                    </li>     
+                    </li>
                     <li>
-                        <!-- <div class="timeline-img">
-                            <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
-                        </div> -->
+                        <span class="timeline-year">2024</span>
                         <div class="timeline-item">
                             <img src="./images/kms.png" alt="KMS Healthcare" class="company-logo">
                             <h2 style="padding-top: 10px;">KMS Healthcare</h2>
@@ -77,28 +74,45 @@
                             <p>- Automated deployment with Miniconda, Docker and Poetry.</p>
                             <p>- Researched and developed medical GenAI projects.</p>
                         </div>
-                    </li>         
-
+                    </li>
                     <li>
-                        <!-- <div class="timeline-img">
-                            <img src="./images/intega.png" alt="Intega IT" class="company-logo">
-                        </div> -->
+                        <span class="timeline-year">2025</span>
                         <div class="timeline-item">
-                            <img src="./images/intega.png" alt="Intega IT" class="company-logo">
-                            <h2>Intega IT</h2>
-                            <h3>L1 Desktop Support Specialist </h3>
-                            <p class="date-p">Sep 2023 - Dec 2023</p>
-                            <p>- Efficiently resolved over 1400 technical issues in 4 months.</p>
-                            <p>- Utilized Field Effect, Datto RMM, and Autotask.</p>
-                            <p>- Maintained a 95% positive feedback rating from end-users.</p>
+                            <img src="./images/searidge.jpg" alt="Searidge Technologies" class="company-logo">
+                            <h2 style="padding-top: 10px;">Searidge Technologies</h2>
+                            <h3>Platform Developer Intern</h3>
+                            <p class="date-p">Jan 2025 - Aug 2025</p>
+                            <p>- Automated Kubernetes deployments using Helm and GitLab CI/CD.</p>
+                            <p>- Integrated Harbor registry with Rancher-managed RKE2 clusters.</p>
+                            <p>- Troubleshot and configured Strimzi Kafka with Keycloak-based OAuth2 authentication.</p>
+                            <p>- Diagnosed and resolved network, storage, and TLS issues across Kubernetes workloads and internal services.</p>
+                            <p>- Centralized platform operations by customizing Rancher UI.</p>
                         </div>
-                    </li> 
+                    </li>
                 </ul>
+                </div>
             </section>
     </div>
         
     
 
+
+    <header>
+        <h1>Technical Skills</h1>
+    </header>
+
+    <section class="skills">
+        <ul>
+            <li><strong>Programming:</strong> Python, C/C++, Java, JavaScript, TypeScript</li>
+            <li><strong>Frameworks &amp; Development:</strong> Node.js, React, Bootstrap, FastAPI, HTML, CSS, Cucumber</li>
+            <li><strong>Cloud &amp; Platform Tools:</strong> Docker, Kubernetes (RKE2), Helm, Rancher, GitLab CI/CD, YAML, microservices</li>
+            <li><strong>Monitoring &amp; Auth:</strong> Grafana, Prometheus, Keycloak, Solace PubSub+ Cloud</li>
+            <li><strong>Databases:</strong> PostgreSQL, MongoDB, Qdrant, Firebase</li>
+            <li><strong>Messaging &amp; Streaming:</strong> Kafka, Solace PubSub+ event broker</li>
+            <li><strong>Tools &amp; Environments:</strong> Git, GitHub, GitLab, Miniconda, Poetry, Heroku, Streamlit, QT Creator</li>
+            <li><strong>Operating Systems:</strong> Linux (Ubuntu), Windows, macOS</li>
+        </ul>
+    </section>
 
     <header>
         <h1>What I have learned</h1>
@@ -172,101 +186,97 @@
 
     <section class="projects">
 
-        <div style="display: flex; direction: row; justify-content: center;">
-            <h2>Hack the Fllush</h2>
+    <div class="project-section">
+        <div class="card">
+            <img src="./images/pacghost.png" class="project-img">
+            <div class="project-content">
+                <div class="project-header">
+                    <h2>PacGhost RL Agent</h2>
+                    <a href="https://github.com/dbkhanh/PacGhost-RL-Agent" target="_blank" class="project-link-inline">GitHub ↗</a>
+                </div>
+                <p>
+                    Reinforcement learning project where a Pac-Man–style ghost agent learns to navigate a grid world using algorithms such as Q-Learning, SARSA, Actor-Critic, Dyna-Q, and DQN. Built on a custom OpenAI Gym–compatible environment, the project explores state representations, reward design, and the trade-off between exploration and exploitation while comparing the performance of different RL methods.
+                </p>
+            </div>
         </div>
-        <div class="project-section">
+    </div>
 
+        <div class="project-section">
+            <div class="card">
+                <img src="./images/agent.png" class="project-img">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2>AI Agent</h2>
+                        <a href="https://github.com/dbkhanh/BaliTravel_FoodGuidance_Agent" target="_blank" class="project-link-inline">GitHub ↗</a>
+                    </div>
+                    <p>
+                       AI Agent using Llama tools and Qdrant vector database to find query items based on similarity search. It also incorporates a GenAI model to assist in generating responses. If a question falls outside the predefined scope, the agent utilizes the Wikipedia library to provide answers.  
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project-section">
             <div class="card">
                 <img src="./images/hack.png" class="project-img">
                 <div class="project-content">
-                    <p style="padding: 20px 0;">
-                    Hack The Fllush is a fun and fast-paced team project built by a group of four over just two nights for a hackathon. It’s a real-time washroom monitoring system that uses sensors and Solace’s event-driven magic to track occupancy and keep things clean and efficient. Built with React, Python, and JavaScript, it delivers live updates to improve the user experience and make maintenance a whole lot smarter!                    </p>
-                    <div style="display: flex; justify-content: center;">
-                        <a href="https://github.com/QuangMinh-Le/uottahack2025" target="_blank" class="button">Source code</a>
+                    <div class="project-header">
+                        <h2>Hack the Fllush</h2>
+                        <a href="https://github.com/QuangMinh-Le/uottahack2025" target="_blank" class="project-link-inline">GitHub ↗</a>
                     </div>
+                    <p>
+                        Hack The Fllush is a fun and fast-paced team project built by a group of four over just two nights for a hackathon. It’s a real-time washroom monitoring system that uses sensors and Solace’s event-driven magic to track occupancy and keep things clean and efficient. Built with React, Python, and JavaScript, it delivers live updates to improve the user experience and make maintenance a whole lot smarter!
+                    </p>
                 </div>
             </div>
-        </div>
-
-
-        <div style="display: flex; direction: row; justify-content: center;">
-            <h2>AI Agent</h2>
         </div>
         <div class="project-section">
-
             <div class="card">
+                <img src="./images/cardgame.png" class="project-img" alt="Tournament of Kings">
                 <div class="project-content">
-                    <p style="padding: 20px 0;">
-                       AI Agent using Llama tools and Qdrant vector database to find query items based on similarity search.
-                       It also incorporates GenAI model to assist in generating responses. 
-                       If a question falls outside the predefined scope, the agent will utilizes Wikipedia library to provide answers.  
-                    </p>
-                    <div style="display: flex; justify-content: center;">
-                        <a href="https://github.com/dbkhanh/BaliTravel_FoodGuidance_Agent" target="_blank" class="button">Source code</a>
+                    <div class="project-header">
+                        <h2>Tournament of Kings</h2>
+                        <a href="https://github.com/dbkhanh/Card-Game" target="_blank" class="project-link-inline">GitHub ↗</a>
                     </div>
+                    <p>
+                        Turn-based card game in Java where players run quests, defeat foes with weapons, and earn shields. Focus was on software correctness, testability, and quality assurance as part of a QA course—with automated testing and behavior-driven development using JUnit, Cucumber, and Selenium WebDriver.
+                    </p>
                 </div>
-                <img src="./images/agent.png" class="project-img">
-
             </div>
         </div>
 
-        <div style="display: flex; direction: row; justify-content: center;">
-            <h2>Museum of Flower</h2>
+        <div class="project-section">
+            <div class="card">
+                <img src="./images/aed.png" class="project-img">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2>AED Simulation</h2>
+                        <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="project-link-inline">GitHub ↗</a>
+                    </div>
+                    <p>
+                        Simulation of an Automated External Defibrillator (AED) interface designed to train individuals in the proper use of an AED during emergency situations. The simulation provides an interactive environment where users can practice the steps necessary to assist someone experiencing sudden cardiac arrest.
+                    </p>
+                </div>
+            </div>
         </div>
+
         <div class="project-section">
             <div class="card">
                 <img src="./images/museum.png"  class="project-img">
                 <div class="project-content">
-                    <p style="padding: 20px 0;">
-                        User-friendly website for booking and managing museum tickets, 
-                        featuring a responsive design to ensure seamless access across devices. Using Python and PostgreSQL, 
-                        including RESTful APIs for data interaction and management.
+                    <div class="project-header">
+                        <h2>Museum of Flower</h2>
+                        <a href="https://github.com/dbkhanh/Museum_Of_Flower" target="_blank" class="project-link-inline">GitHub ↗</a>
+                    </div>
+                    <p>
+                        User-friendly website for booking and managing museum tickets, featuring a responsive design to ensure seamless access across devices. Built with Python and PostgreSQL, including RESTful APIs for data interaction and management.
                     </p>
-                    <div style="display: flex; justify-content: center;">
-                        <a href="https://github.com/dbkhanh/Museum_Of_Flower" target="_blank" class="button">Source code</a>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <div style="display: flex; direction: row; justify-content: center;">
-            <h2>AED Simulation</h2>
-        </div>
-        <div class="project-section">
-            <div class="card">
-                <div class="project-content">
-                    <p style="padding: 20px 0;">
-                        This project is a simulation of an Automated External Defibrillator (AED) interface designed to train individuals in the proper
-                         use of an AED during emergency situations. The simulation provides an interactive environment where users can practice the steps necessary
-                          to assist someone experiencing sudden cardiac arrest.
-                    </p style="padding: 20px 0;">
-                    <div style="display: flex; justify-content: center;">
-                        <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="button">Source code</a>
-                    </div>
-                </div>
-                      <img src="./images/aed.png" class="project-img">
             </div>
         </div>
 
-        <div style="display: flex; direction: row; justify-content: center;">
-            <h2>Tic-Tac-Toe</h2>
-        </div>
-        <div class="project-section">
-            <div class="card">
-                <img src="./images/xo.png" class="project-img" style="width: 30%; height: auto;">
-                <div class="project-content">
-                    <p style="padding: 20px 0;">
-                        Tic-tac-toe game using Java, incorporating OOP principles to ensure a user-friendly and interactive experience.
-                By leveraging Java's core concepts, including classes, objects, and inheritance, I carefully designed the structure and functionality of the game.
-                Additionally, I utilized Java's Swing library to implement a graphical user interface (GUI). 
-                    </p>
-                    <div style="display: flex; justify-content: center;">
-                        <a href="https://github.com/dbkhanh/X-O-Game" target="_blank" class="button">Source code</a>
-                    </div>
-                </div>
 
-            </div>
-        </div>
 
     </section>
 
@@ -345,6 +355,112 @@
             window.addEventListener("scroll", callbackFunc);
 
             })();
+    </script>
+    <script>
+        (function() {
+            var timeline = document.getElementById("timeline");
+            if (!timeline) return;
+            var tiltAmount = 1.4;
+            var scrollFactor = 0.018;
+            function updateTilt() {
+                if (window.matchMedia("(max-width: 900px)").matches) return;
+                var scrollY = window.scrollY || window.pageYOffset;
+                var tilt = Math.sin(scrollY * scrollFactor) * tiltAmount;
+                timeline.style.setProperty("--timeline-tilt", tilt.toFixed(2) + "deg");
+            }
+            window.addEventListener("scroll", updateTilt, { passive: true });
+            window.addEventListener("load", updateTilt);
+            window.addEventListener("resize", updateTilt);
+        })();
+    </script>
+    <script>
+        (function() {
+            var scrollEl = document.getElementById("timeline-scroll");
+            var timeline = document.getElementById("timeline");
+            if (!scrollEl || !timeline) return;
+            var track = timeline.querySelector(".timeline-track");
+            var lis = track ? track.querySelectorAll("li") : [];
+            var prevBtn = timeline.querySelector(".timeline-arrow-prev");
+            var nextBtn = timeline.querySelector(".timeline-arrow-next");
+            var smallBreakpoint = window.matchMedia("(max-width: 900px)");
+
+            function scrollToCard(index) {
+                if (index < 0 || index >= lis.length) return;
+                var li = lis[index];
+                var scrollLeft = li.offsetLeft - (scrollEl.clientWidth / 2) + (li.offsetWidth / 2);
+                scrollEl.scrollLeft = Math.max(0, scrollLeft);
+            }
+
+            function updateArrows() {
+                if (!smallBreakpoint.matches || !prevBtn || !nextBtn) return;
+                var current = getCurrentIndex();
+                prevBtn.disabled = current <= 0;
+                nextBtn.disabled = current >= lis.length - 1;
+            }
+
+            function initSmall() {
+                if (!smallBreakpoint.matches) return;
+                var i;
+                for (i = 0; i < lis.length; i++) lis[i].classList.add("in-view");
+                scrollEl.scrollLeft = scrollEl.scrollWidth - scrollEl.clientWidth;
+                timeline.classList.add("timeline-shake");
+                setTimeout(function() {
+                    timeline.classList.remove("timeline-shake");
+                    timeline.classList.add("timeline-straight");
+                }, 1200);
+                updateArrows();
+            }
+
+            function getCurrentIndex() {
+                var center = scrollEl.scrollLeft + scrollEl.clientWidth / 2;
+                var current = 0;
+                for (var i = 0; i < lis.length; i++) {
+                    if (lis[i].offsetLeft + lis[i].offsetWidth / 2 <= center) current = i;
+                }
+                return current;
+            }
+
+            if (prevBtn) prevBtn.addEventListener("click", function() {
+                if (!smallBreakpoint.matches) return;
+                var target = getCurrentIndex();
+                if (target > 0) target--;
+                scrollToCard(target);
+                timeline.classList.remove("timeline-straight");
+                timeline.classList.add("timeline-shake");
+                setTimeout(function() {
+                    timeline.classList.remove("timeline-shake");
+                    timeline.classList.add("timeline-straight");
+                }, 1200);
+                setTimeout(updateArrows, 350);
+            });
+            if (nextBtn) nextBtn.addEventListener("click", function() {
+                if (!smallBreakpoint.matches) return;
+                var target = getCurrentIndex();
+                if (target < lis.length - 1) target++;
+                scrollToCard(target);
+                timeline.classList.remove("timeline-straight");
+                timeline.classList.add("timeline-shake");
+                setTimeout(function() {
+                    timeline.classList.remove("timeline-shake");
+                    timeline.classList.add("timeline-straight");
+                }, 1200);
+                setTimeout(updateArrows, 350);
+            });
+
+            scrollEl.addEventListener("scroll", updateArrows);
+            window.addEventListener("load", initSmall);
+            smallBreakpoint.addListener(function() {
+                if (smallBreakpoint.matches) {
+                    var i;
+                    for (i = 0; i < lis.length; i++) lis[i].classList.add("in-view");
+                    scrollEl.scrollLeft = scrollEl.scrollWidth - scrollEl.clientWidth;
+                    timeline.classList.add("timeline-straight");
+                    updateArrows();
+                } else {
+                    timeline.classList.remove("timeline-straight");
+                }
+            });
+        })();
     </script>
     
 </body>
