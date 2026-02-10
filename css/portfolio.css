@@ -7,12 +7,18 @@
   font-family: "Roboto Slab", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.5;
-  background-color: #000;
+  background: #000;
+  background: linear-gradient(180deg, #0a0a0f 0%, #0d1117 25%, #08090c 60%, #000 100%);
   color: #fff;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 h1 {
@@ -25,7 +31,7 @@ h1 {
 
 nav {
   height: 50px;
-  background-color: rgb(18, 18, 18);
+  background: rgba(10, 10, 15, 0.95);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -55,6 +61,17 @@ nav {
   font-style: italic;
 }
 
+a.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+a.logo-link:hover {
+  color: rgba(120, 255, 214, 0.9);
+}
+
 nav a {
   text-decoration: none;
   color: white;
@@ -73,6 +90,159 @@ nav a:hover {
 
 .nav-items.collapsed {
   display: none;
+}
+
+/* ========== HERO / HOME SECTION (merged into portfolio) ========== */
+.hero-section {
+  scroll-margin-top: 50px;
+}
+#experience,
+#education {
+  scroll-margin-top: 50px;
+}
+
+.hero-section .hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  min-height: 100vh;
+  padding: 80px clamp(1.5rem, 4vw, 3rem) 4rem;
+  /* background: linear-gradient(180deg, #0a0a0f 0, #0d1117 40%, #000 100%); */
+  position: relative;
+  margin: 0 auto;
+}
+/* .hero-section .hero-container::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(120, 255, 214, 0.5), transparent);
+  opacity: 0.7;
+} */
+.hero-section .hero-column-left {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.hero-section .hero-img {
+  width: 70%;
+  height: auto;
+  max-width: min(380px, 42vw);
+  border-radius: 5%;
+  border: 1px solid rgba(120, 255, 214, 0.25);
+  box-shadow: 0 0 30px rgba(120, 255, 214, 0.1);
+  object-fit: cover;
+}
+.hero-section .hero-column-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+  max-width: 520px;
+}
+.hero-section .hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  display: block;
+  justify-content: flex-start;
+  padding: 0;
+  letter-spacing: 0.05em;
+}
+.hero-section .hero-tagline {
+  font-size: 1.1rem;
+  color: rgba(120, 255, 214, 0.9);
+  margin-bottom: 1rem;
+}
+.hero-section .hero-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(220, 230, 240, 0.9);
+  margin-bottom: 1rem;
+}
+.hero-section .hero-cta-text {
+  font-size: 1rem;
+  color: rgba(200, 210, 220, 0.85);
+  margin-bottom: 1rem;
+}
+.hero-section .hero-button {
+  display: inline-block;
+  align-self: center;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.85rem;
+  color: #0a0a0f;
+  margin-top: 1rem;
+  background: rgba(120, 255, 214, 0.9);
+  border: 1px solid rgba(120, 255, 214, 0.5);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  animation: hero-btn-glow 2.5s ease-in-out infinite;
+}
+.hero-section .hero-button:hover {
+  background: #fff;
+  color: #0a0a0f;
+  transform: scale(1.08);
+  box-shadow: 0 0 24px rgba(120, 255, 214, 0.6), 0 0 48px rgba(120, 255, 214, 0.25);
+  animation: none;
+}
+.hero-section .hero-button:active {
+  transform: scale(0.98);
+}
+@keyframes hero-btn-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(120, 255, 214, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(120, 255, 214, 0.5), 0 0 30px rgba(120, 255, 214, 0.15); }
+}
+
+@media (max-width: 900px) {
+  .hero-section .hero-container {
+    flex-direction: column;
+    padding: 70px 1.5rem 3rem;
+    gap: 2rem;
+  }
+  .hero-section .hero-column-left {
+    flex: 0 0 auto;
+  }
+  .hero-section .hero-column-right {
+    text-align: center;
+    align-items: center;
+    max-width: none;
+  }
+  .hero-section .hero-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .hero-section .hero-img {
+    max-width: min(280px, 75vw);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-section .hero-tagline,
+  .hero-section .hero-intro,
+  .hero-section .hero-cta-text {
+    font-size: 0.9rem;
+  }
+  .hero-section .hero-button {
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+  }
+  .hero-section .hero-img {
+    max-width: min(220px, 70vw);
+  }
 }
 
 /* ========== TIMELINE – HORIZONTAL + POP-UP ========== */
@@ -362,7 +532,7 @@ h2 {
 }
 
 .projects {
-  background: linear-gradient(180deg, black, black, #104345);
+  /* background: linear-gradient(180deg, black, black, #104345); */
   margin: 0 auto;
   padding: 1rem 0 3rem 0;
 }
@@ -408,7 +578,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 7rem 2rem;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -450,7 +620,7 @@ h2 {
   color: #ffb3e0;
 }
 
-/* Bubbling round circles – violet accent (distinct from cyan projects & pink skills) */
+/* What I have learned – same bubble style as "Other technologies I use" (pink) */
 @keyframes course-bubble-pop {
   0% {
     opacity: 0;
@@ -470,13 +640,12 @@ h2 {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #1a1425 0, #0d0812 50%, #050308 100%);
-  border: 1px solid rgba(160, 100, 255, 0.4);
+  background: #0d0610;
+  border: 1px solid rgba(255, 105, 180, 0.5);
   box-shadow:
-    0 0 0 1px rgba(160, 100, 255, 0.15),
-    0 8px 24px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(160, 100, 255, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    0 0 0 1px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.2),
+    inset 0 0 20px rgba(255, 105, 180, 0.03);
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -496,11 +665,10 @@ h2 {
 .course-card:nth-child(6) { animation-delay: 0.4s; }
 .course-card:hover {
   transform: translateY(-4px) scale(1.03);
-  border-color: rgba(160, 100, 255, 0.6);
+  border-color: rgba(255, 105, 180, 0.7);
   box-shadow:
-    0 0 0 1px rgba(160, 100, 255, 0.25),
-    0 12px 28px rgba(0, 0, 0, 0.6),
-    0 0 28px rgba(160, 100, 255, 0.25);
+    0 0 0 1px rgba(255, 105, 180, 0.25),
+    0 0 28px rgba(255, 105, 180, 0.3);
 }
 .course-card.active {
   width: 280px;
@@ -511,11 +679,10 @@ h2 {
   align-items: stretch;
   text-align: left;
   transform: translateY(-2px);
-  border-color: rgba(160, 100, 255, 0.55);
+  border-color: rgba(255, 105, 180, 0.6);
   box-shadow:
-    0 0 0 1px rgba(160, 100, 255, 0.3),
-    0 14px 36px rgba(0, 0, 0, 0.6),
-    0 0 32px rgba(160, 100, 255, 0.2);
+    0 0 0 1px rgba(255, 105, 180, 0.25),
+    0 0 32px rgba(255, 105, 180, 0.25);
 }
 .course-card.active::after {
   display: none;
@@ -528,17 +695,17 @@ h2 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(200, 150, 255, 0.35), transparent);
+  background: radial-gradient(circle, rgba(255, 105, 180, 0.25), transparent);
   opacity: 0.9;
 }
 .course-card h2 {
   font-size: 0.8rem;
   line-height: 1.2;
   margin: 0;
-  color: rgba(230, 215, 255, 0.95);
-  cursor: pointer;
+  color: #ffb3e0;
   letter-spacing: 0.02em;
   font-weight: 600;
+  pointer-events: none;
 }
 .course-card.active h2 {
   font-size: 1.1rem;
@@ -553,6 +720,7 @@ h2 {
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.25s ease;
+  pointer-events: none;
 }
 .course-card.active ul {
   max-height: 400px;
@@ -561,7 +729,7 @@ h2 {
 }
 .course-card li {
   margin-bottom: 0.35rem;
-  color: rgba(210, 200, 230, 0.9);
+  color: rgba(255, 220, 240, 0.95);
   font-size: 0.8rem;
 }
 .course-card.active li {
@@ -602,7 +770,7 @@ h2 {
 }
 
 header {
-  background-color: black;
+  background: transparent;
   padding: 2rem;
   color: white;
   text-align: center;
@@ -629,12 +797,12 @@ header {
 }
 
 .edu-back {
-  background: linear-gradient(180deg, rgb(84, 1, 1), black);
+  /* background: linear-gradient(180deg, #08090c 0%, #0d1117 30%, #000 100%); */
   width: 100%;
 }
 
 .education {
-  padding: 5%;
+  padding: 3%;
   width: 40%;
 }
 
@@ -856,6 +1024,97 @@ header {
 .projects .project-section .project-img {
   object-fit: cover;
   border-radius: 10px;
+}
+
+/* Extra tech skills block under "What I have done" */
+.tech-skills-extra {
+  max-width: 1100px;
+  margin: 2.5rem auto 0;
+  padding: 2rem 2rem 3rem;
+  width: 100%;
+}
+
+/* On large screens (monitors), use more width so the skill bubbles fill the space */
+@media (min-width: 1200px) {
+  .tech-skills-extra {
+    max-width: 90%;
+  }
+  .tech-skills-extra .skills {
+    max-width: 100%;
+  }
+}
+
+.tech-skills-extra h2 {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.tech-skills-intro {
+  font-size: 0.95rem;
+  color: rgba(220, 230, 240, 0.85);
+  margin-bottom: 1.25rem;
+}
+
+.tech-skills-extra .skills {
+  padding: 0;
+  margin: 0;
+}
+
+.github-cta-wrap {
+  text-align: center;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+.github-cta-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(120, 255, 214, 0.95);
+  background: transparent;
+  border: 1px solid rgba(120, 255, 214, 0.5);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.github-cta-btn:hover {
+  color: #0a0a0f;
+  background: rgba(120, 255, 214, 0.9);
+  border-color: rgba(120, 255, 214, 0.8);
+  box-shadow: 0 0 20px rgba(120, 255, 214, 0.3);
+}
+
+/* Skill tags inside project cards – same bubble style as Technical Skills */
+.project-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1rem;
+}
+
+.projects .skill-tag {
+  display: inline-block;
+  background: #0d0610;
+  border: 1px solid rgba(255, 105, 180, 0.5);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  color: #ffb3e0;
+  box-shadow:
+    0 0 0 1px rgba(255, 105, 180, 0.15),
+    0 0 16px rgba(255, 105, 180, 0.18),
+    inset 0 0 16px rgba(255, 105, 180, 0.03);
+  white-space: nowrap;
+}
+
+.projects .skill-tag:hover {
+  border-color: rgba(255, 105, 180, 0.7);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
 }
 
 /* Large screens (monitors): 2 projects per row */
