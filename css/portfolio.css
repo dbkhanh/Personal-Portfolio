@@ -365,11 +365,17 @@ nav a:hover {
   resize: vertical;
   min-height: 100px;
 }
-.contact-send-btn {
-  display: block;
-  width: 100%;
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 1.5rem;
   margin-top: 1.25rem;
-  padding: 0.6rem 1.25rem;
+}
+.contact-send-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: #0a0a0f;
