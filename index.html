@@ -14,8 +14,11 @@
         </a>
         <div class="nav-items" id="nav-items">
             <a href="#home"><strong>Home</strong></a>
-            <a href="./resume/Resume_F25.pdf" target="_blank"><strong>Resume</strong></a>
-            <a href="about.html"><strong>About Me</strong></a>
+            <a href="#about"><strong>About me</strong></a>
+            <a href="#experience"><strong>Experience</strong></a>
+            <a href="#education"><strong>Education</strong></a>
+            <a href="#projects"><strong>Projects</strong></a>
+            <a href="#contact"><strong>Contact</strong></a>
         </div>
         <div class="menu-icon" id="menu-icon">
           ☰
@@ -31,16 +34,33 @@
                 <h1 class="hero-title">ANNE DANG</h1>
                 <p class="hero-tagline">Welcome to Anne's personal space!</p>
                 <p class="hero-intro">
-                    I am a recent Computer Science graduate from Carleton University, specializing in Software Engineering with a minor in Mathematics, and I am actively seeking new graduate roles in software engineering.
+                    New graduate exploring tech and the world beyond.              
                 </p>
-                <p class="hero-cta-text">I am eager to experience and learn!</p>
-                <a href="#experience" class="hero-button">Let's go</a>
+                <div class="hero-buttons">
+                    <a href="#about" class="hero-button">Let's go</a>
+                    <a href="./resume/Resume_F25.pdf" target="_blank" rel="noopener noreferrer" class="hero-button hero-button-resume">My resume</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-inner">
+
+            <h2 class="about-heading">About me</h2>
+            <p class="about-description">
+                I'm a software engineer interested in <strong>DevOps</strong> and <strong>AI-powered applications</strong>. I enjoy building reliable systems, automating workflows, and shipping practical, user-facing software.
+                <br><br>
+                I like tackling real engineering problems - clean APIs, smoother deployments, and bringing AI models into production.
+                <br><br>
+                I'm currently open to <strong>New Grad roles</strong> in <strong>DevOps</strong> and <strong>AI application development</strong>.
+            </p>
         </div>
     </section>
 
     <div id="experience">
         <h1>Experience</h1>
+        <p class="timeline-swipe-hint" aria-hidden="true">Swipe to see more</p>
         <section class="timeline" id="timeline">
                 <button type="button" class="timeline-arrow timeline-arrow-prev" aria-label="Previous job" title="Previous job">←</button>
                 <button type="button" class="timeline-arrow timeline-arrow-next" aria-label="Next job" title="Next job">→</button>
@@ -53,9 +73,20 @@
                             <h2>Intega IT</h2>
                             <h3>L1 Desktop Support Specialist</h3>
                             <p class="date-p">Sep 2023 - Dec 2023</p>
-                            <p>- Efficiently resolved over 1400 technical issues in 4 months.</p>
-                            <p>- Utilized Field Effect, Datto RMM, and Autotask.</p>
-                            <p>- Maintained a 95% positive feedback rating from end-users.</p>
+                            <div class="timeline-item-summary">
+                                <div class="timeline-job-tags">
+                                    <span class="job-tag">Field Effect</span>
+                                    <span class="job-tag">Datto RMM</span>
+                                    <span class="job-tag">Autotask</span>
+                                </div>
+                                <button type="button" class="timeline-learn-more" aria-expanded="false">Show more</button>
+                            </div>
+                            <div class="timeline-item-details" hidden>
+                                <p>- Efficiently resolved over 1400 technical issues in 4 months.</p>
+                                <p>- Utilized Field Effect, Datto RMM, and Autotask.</p>
+                                <p>- Maintained a 95% positive feedback rating from end-users.</p>
+                                <button type="button" class="timeline-show-less">Show less</button>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -65,11 +96,25 @@
                             <h2 style="padding-top: 10px;">KMS Healthcare</h2>
                             <h3>Software Engineer Intern</h3>
                             <p class="date-p">Jun 2024 - Sep 2024</p>
-                            <p>- Fine-tuned a Seq2Seq model achieving 80% accuracy.</p>
-                            <p>- Integrated API with Qdrant for disease profile generation.</p>
-                            <p>- Designed responsive UI with TypeScript, Bootstrap, and JSX.</p>
-                            <p>- Automated deployment with Miniconda, Docker and Poetry.</p>
-                            <p>- Researched and developed medical GenAI projects.</p>
+                            <div class="timeline-item-summary">
+                                <div class="timeline-job-tags">
+                                    <span class="job-tag">Python</span>
+                                    <span class="job-tag">TypeScript</span>
+                                    <span class="job-tag">Qdrant</span>
+                                    <span class="job-tag">Docker</span>
+                                    <span class="job-tag">Poetry</span>
+                                    <span class="job-tag">Bootstrap</span>
+                                </div>
+                                <button type="button" class="timeline-learn-more" aria-expanded="false">Show more</button>
+                            </div>
+                            <div class="timeline-item-details" hidden>
+                                <p>- Fine-tuned a Seq2Seq model achieving 80% accuracy.</p>
+                                <p>- Integrated API with Qdrant for disease profile generation.</p>
+                                <p>- Designed responsive UI with TypeScript, Bootstrap, and JSX.</p>
+                                <p>- Automated deployment with Miniconda, Docker and Poetry.</p>
+                                <p>- Researched and developed medical GenAI projects.</p>
+                                <button type="button" class="timeline-show-less">Show less</button>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -79,11 +124,25 @@
                             <h2 style="padding-top: 10px;">Searidge Technologies</h2>
                             <h3>Platform Developer Intern</h3>
                             <p class="date-p">Jan 2025 - Aug 2025</p>
-                            <p>- Automated Kubernetes deployments using Helm and GitLab CI/CD.</p>
-                            <p>- Integrated Harbor registry with Rancher-managed RKE2 clusters.</p>
-                            <p>- Troubleshot and configured Strimzi Kafka with Keycloak-based OAuth2 authentication.</p>
-                            <p>- Diagnosed and resolved network, storage, and TLS issues across Kubernetes workloads and internal services.</p>
-                            <p>- Centralized platform operations by customizing Rancher UI.</p>
+                            <div class="timeline-item-summary">
+                                <div class="timeline-job-tags">
+                                    <span class="job-tag">Kubernetes</span>
+                                    <span class="job-tag">Helm</span>
+                                    <span class="job-tag">GitLab CI/CD</span>
+                                    <span class="job-tag">Rancher</span>
+                                    <span class="job-tag">Kafka</span>
+                                    <span class="job-tag">Keycloak</span>
+                                </div>
+                                <button type="button" class="timeline-learn-more" aria-expanded="false">Show more</button>
+                            </div>
+                            <div class="timeline-item-details" hidden>
+                                <p>- Automated Kubernetes deployments using Helm and GitLab CI/CD.</p>
+                                <p>- Integrated Harbor registry with Rancher-managed RKE2 clusters.</p>
+                                <p>- Troubleshot and configured Strimzi Kafka with Keycloak-based OAuth2 authentication.</p>
+                                <p>- Diagnosed and resolved network, storage, and TLS issues across Kubernetes workloads and internal services.</p>
+                                <p>- Centralized platform operations by customizing Rancher UI.</p>
+                                <button type="button" class="timeline-show-less">Show less</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -111,7 +170,7 @@
     </div>
 
 
-    <header>
+    <header id="projects">
         <h1>What I have done</h1>
     </header>
 
@@ -123,7 +182,7 @@
             <div class="project-content">
                 <div class="project-header">
                     <h2>PacGhost RL Agent</h2>
-                    <a href="https://github.com/dbkhanh/PacGhost-RL-Agent" target="_blank" class="project-link-inline">GitHub ↗</a>
+                    <a href="https://github.com/dbkhanh/PacGhost-RL-Agent" target="_blank" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
                 </div>
                 <p>
                     Reinforcement learning project where a Pac-Man–style ghost agent learns to navigate a grid world using algorithms such as Q-Learning, SARSA, Actor-Critic, Dyna-Q, and DQN. Built on a custom OpenAI Gym–compatible environment, the project explores state representations, reward design, and the trade-off between exploration and exploitation while comparing the performance of different RL methods.
@@ -144,7 +203,7 @@
                 <div class="project-content">
                     <div class="project-header">
                         <h2>AI Agent</h2>
-                        <a href="https://github.com/dbkhanh/BaliTravel_FoodGuidance_Agent" target="_blank" class="project-link-inline">GitHub ↗</a>
+                        <a href="https://github.com/dbkhanh/BaliTravel_FoodGuidance_Agent" target="_blank" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
                     </div>
                     <p>
                        AI Agent using Llama tools and Qdrant vector database to find query items based on similarity search. It also incorporates a GenAI model to assist in generating responses. If a question falls outside the predefined scope, the agent utilizes the Wikipedia library to provide answers.  
@@ -169,7 +228,7 @@
                 <div class="project-content">
                     <div class="project-header">
                         <h2>Hack the Fllush</h2>
-                        <a href="https://github.com/QuangMinh-Le/uottahack2025" target="_blank" class="project-link-inline">GitHub ↗</a>
+                        <a href="https://github.com/QuangMinh-Le/uottahack2025" target="_blank" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
                     </div>
                     <p>
                         Hack The Fllush is a fun and fast-paced team project built by a group of four over just two nights for a hackathon. It's a real-time washroom monitoring system that uses sensors and Solace's event-driven magic to track occupancy and keep things clean and efficient. Built with React, Python, and JavaScript, it delivers live updates to improve the user experience and make maintenance a whole lot smarter!
@@ -185,13 +244,14 @@
                 </div>
             </div>
         </div>
+
         <div class="project-section">
             <div class="card">
                 <img src="./images/cardgame.png" class="project-img" alt="Tournament of Kings">
                 <div class="project-content">
                     <div class="project-header">
                         <h2>Tournament of Kings</h2>
-                        <a href="https://github.com/dbkhanh/Card-Game" target="_blank" class="project-link-inline">GitHub ↗</a>
+                        <a href="https://github.com/dbkhanh/Card-Game" target="_blank" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
                     </div>
                     <p>
                         Turn-based card game in Java where players run quests, defeat foes with weapons, and earn shields. Focus was on software correctness, testability, and quality assurance as part of a QA course—with automated testing and behavior-driven development using JUnit, Cucumber, and Selenium WebDriver.
@@ -212,11 +272,32 @@
 
         <div class="project-section">
             <div class="card">
+                <img src="./images/health.png" class="project-img" alt="Health &amp; Fitness Club backend">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2>Health &amp; Fitness Club (Backend)</h2>
+                        <a href="https://github.com/dbkhanh/Health_Fitness_Club/tree/main/backend" target="_blank" rel="noopener noreferrer" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
+                    </div>
+                    <p>
+                        Backend services and APIs for a health and fitness club application—supporting membership, classes, bookings, or user management with a clean, maintainable server-side stack.
+                    </p>
+                    <div class="project-skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="project-section">
+            <div class="card">
                 <img src="./images/aed.png" class="project-img">
                 <div class="project-content">
                     <div class="project-header">
                         <h2>AED Simulation</h2>
-                        <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="project-link-inline">GitHub ↗</a>
+                        <a href="https://github.com/dbkhanh/Automated-External-Defibrillators-Simulation" target="_blank" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
                     </div>
                     <p>
                         Simulation of an Automated External Defibrillator (AED) interface designed to train individuals in the proper use of an AED during emergency situations. The simulation provides an interactive environment where users can practice the steps necessary to assist someone experiencing sudden cardiac arrest.
@@ -235,7 +316,7 @@
                 <div class="project-content">
                     <div class="project-header">
                         <h2>Museum of Flower</h2>
-                        <a href="https://github.com/dbkhanh/Museum_Of_Flower" target="_blank" class="project-link-inline">GitHub ↗</a>
+                        <a href="https://github.com/dbkhanh/Museum_Of_Flower" target="_blank" class="project-link-inline">GitHub &#x2197;&#xFE0E;</a>
                     </div>
                     <p>
                         User-friendly website for booking and managing museum tickets, featuring a responsive design to ensure seamless access across devices. Built with Python and PostgreSQL, including RESTful APIs for data interaction and management.
@@ -250,17 +331,18 @@
             </div>
         </div>
 
+
+
     </section>
 
     <div class="tech-skills-extra">
-        <h2>Other technologies I use</h2>
+        <h2>Technologies I use</h2>
         <p class="tech-skills-intro">Beyond the stack shown in the projects above, I also work with:</p>
         <section class="skills">
             <ul>
+                <li><strong>Programming Language</strong> Python, Java, JavaScript, C++</li>
                 <li><strong>Cloud &amp; Platform Tools:</strong> Docker, Kubernetes (RKE2), Helm, Rancher, GitLab CI/CD</li>
                 <li><strong>Monitoring &amp; Auth:</strong> Grafana, Prometheus, Keycloak, Solace PubSub+ Cloud</li>
-                <li><strong>Tools &amp; Environments:</strong> Git, GitHub, GitLab, Miniconda, Poetry</li>
-                <li><strong>Operating Systems:</strong> Linux (Ubuntu), Windows, macOS</li>
             </ul>
         </section>
         <p class="github-cta-wrap">
@@ -271,7 +353,7 @@
 
 
     <header>
-        <h1>What I have gained</h1>
+        <h1>What I could do</h1>
     </header>
 
     <section>
@@ -334,8 +416,33 @@
             </div>
         </div>
     </section>
+
+    <section id="contact" class="contact-section">
+        <h1>Contact</h1>
+        <p class="contact-intro">Feel free to reach out - I'd love to connect! 🌱 </p>
+        <form id="contact-form" class="contact-form" novalidate>
+            <label for="contact-email" class="contact-label">From:</label>
+            <input type="email" id="contact-email" name="email" class="contact-input" placeholder="your@email.com" required>
+            <label for="contact-message" class="contact-label">Content:</label>
+            <textarea id="contact-message" name="message" class="contact-textarea" placeholder="Your message..." rows="5" required></textarea>
+            <button type="submit" class="contact-send-btn">Send</button>
+        </form>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/annedang2402/" target="_blank" rel="noopener noreferrer" class="contact-link contact-linkedin">LinkedIn</a>
+        </div>
+    </section>
   
     
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = document.getElementById('contact-email').value.trim();
+            var message = document.getElementById('contact-message').value.trim();
+            var body = 'From: ' + email + '\n\n' + message;
+            var mailto = 'mailto:db2.khanh@gmail.com?subject=Portfolio%20contact&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+        });
+    </script>
     <script>
         document.querySelectorAll('.course-card').forEach(card => {
             card.addEventListener('click', function () {
@@ -344,10 +451,28 @@
         });
     </script>
     <script>
+        document.querySelectorAll('.timeline-item').forEach(function (item) {
+            var learnBtn = item.querySelector('.timeline-learn-more');
+            var showLessBtn = item.querySelector('.timeline-show-less');
+            var details = item.querySelector('.timeline-item-details');
+            if (!learnBtn || !showLessBtn || !details) return;
+            learnBtn.addEventListener('click', function () {
+                item.classList.add('expanded');
+                details.hidden = false;
+                learnBtn.setAttribute('aria-expanded', 'true');
+            });
+            showLessBtn.addEventListener('click', function () {
+                item.classList.remove('expanded');
+                details.hidden = true;
+                learnBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuIcon = document.getElementById('menu-icon');
             const navItems = document.getElementById('nav-items');
-        
+
             menuIcon.addEventListener('click', function () {
                 if (navItems.classList.contains('expanded')) {
                     navItems.classList.remove('expanded');
@@ -355,6 +480,18 @@
                     navItems.classList.add('expanded');
                 }
             });
+
+            // Scroll reveal: cards slide up when they enter the viewport
+            var revealEls = document.querySelectorAll('.about-section, .project-section, .course-card, .contact-section');
+            revealEls.forEach(function (el) { el.classList.add('scroll-reveal'); });
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('scroll-reveal-in');
+                    }
+                });
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+            revealEls.forEach(function (el) { observer.observe(el); });
         });
     </script>
     <script>
@@ -396,17 +533,38 @@
         (function() {
             var timeline = document.getElementById("timeline");
             if (!timeline) return;
-            var tiltAmount = 1.4;
-            var scrollFactor = 0.018;
-            function updateTilt() {
+            var lastScrollY = window.scrollY || window.pageYOffset;
+            var scrollEndTimer = null;
+            var maxTilt = 2.2;
+            var deltaFactor = 0.12;
+            var scrollEndDelay = 120;
+
+            function applyTilt(deg) {
+                timeline.style.setProperty("--timeline-tilt", deg.toFixed(2) + "deg");
+            }
+
+            function onScroll() {
                 if (window.matchMedia("(max-width: 900px)").matches) return;
                 var scrollY = window.scrollY || window.pageYOffset;
-                var tilt = Math.sin(scrollY * scrollFactor) * tiltAmount;
-                timeline.style.setProperty("--timeline-tilt", tilt.toFixed(2) + "deg");
+                var delta = scrollY - lastScrollY;
+                lastScrollY = scrollY;
+                var tilt = Math.max(-maxTilt, Math.min(maxTilt, delta * deltaFactor));
+                applyTilt(tilt);
+
+                clearTimeout(scrollEndTimer);
+                scrollEndTimer = setTimeout(function() {
+                    applyTilt(0);
+                }, scrollEndDelay);
             }
-            window.addEventListener("scroll", updateTilt, { passive: true });
-            window.addEventListener("load", updateTilt);
-            window.addEventListener("resize", updateTilt);
+
+            window.addEventListener("scroll", onScroll, { passive: true });
+            window.addEventListener("load", function() {
+                lastScrollY = window.scrollY || window.pageYOffset;
+                applyTilt(0);
+            });
+            window.addEventListener("resize", function() {
+                applyTilt(0);
+            });
         })();
     </script>
     <script>

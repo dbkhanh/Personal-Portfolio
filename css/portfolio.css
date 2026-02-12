@@ -97,7 +97,10 @@ nav a:hover {
   scroll-margin-top: 50px;
 }
 #experience,
-#education {
+#education,
+#about,
+#projects,
+#contact {
   scroll-margin-top: 50px;
 }
 
@@ -166,20 +169,25 @@ nav a:hover {
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(220, 230, 240, 0.9);
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
 }
 .hero-section .hero-cta-text {
   font-size: 1rem;
   color: rgba(200, 210, 220, 0.85);
   margin-bottom: 1rem;
 }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
 .hero-section .hero-button {
   display: inline-block;
-  align-self: center;
   padding: 0.5rem 1.4rem;
   font-size: 0.85rem;
   color: #0a0a0f;
-  margin-top: 1rem;
   background: rgba(120, 255, 214, 0.9);
   border: 1px solid rgba(120, 255, 214, 0.5);
   border-radius: 50px;
@@ -198,6 +206,18 @@ nav a:hover {
 }
 .hero-section .hero-button:active {
   transform: scale(0.98);
+}
+.hero-button-resume {
+  animation: none;
+  background: transparent;
+  color: rgba(230, 190, 140, 0.95);
+  border-color: rgba(218, 165, 105, 0.6);
+}
+.hero-button-resume:hover {
+  background: rgba(218, 165, 105, 0.15);
+  color: rgba(245, 220, 180, 1);
+  border-color: rgba(218, 165, 105, 0.85);
+  box-shadow: 0 0 18px rgba(218, 165, 105, 0.25);
 }
 @keyframes hero-btn-glow {
   0%, 100% { box-shadow: 0 0 12px rgba(120, 255, 214, 0.3); }
@@ -225,6 +245,9 @@ nav a:hover {
   .hero-section .hero-img {
     max-width: min(280px, 75vw);
   }
+  .hero-buttons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -243,6 +266,159 @@ nav a:hover {
   .hero-section .hero-img {
     max-width: min(220px, 70vw);
   }
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* ========== ABOUT ME (below hero) ========== */
+.about-section {
+  padding: 3rem clamp(1.5rem, 5vw, 3rem) 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgb(57, 112, 81)
+}
+.about-inner {
+  text-align: left;
+}
+.about-meta {
+  font-size: 0.95rem;
+  color: rgba(220, 230, 240, 0.9);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+.about-heading {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+}
+.about-description {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(220, 230, 240, 0.9);
+}
+.about-description a {
+  color: rgba(120, 255, 214, 0.95);
+  text-decoration: none;
+}
+.about-description a:hover {
+  text-decoration: underline;
+}
+
+/* ========== CONTACT (last section) ========== */
+.contact-section {
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+}
+.contact-section h1 {
+  margin-bottom: 0.75rem;
+}
+.contact-intro {
+  font-size: 1rem;
+  color: rgba(220, 230, 240, 0.9);
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+.contact-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(220, 230, 240, 0.95);
+  margin-bottom: 0.35rem;
+  margin-top: 1rem;
+}
+.contact-label:first-of-type {
+  margin-top: 0;
+}
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #fff;
+  background: rgba(15, 15, 22, 0.9);
+  border: 1px solid rgba(120, 255, 214, 0.35);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: rgba(180, 190, 200, 0.5);
+}
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: rgba(120, 255, 214, 0.7);
+  box-shadow: 0 0 12px rgba(120, 255, 214, 0.15);
+}
+.contact-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contact-send-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0a0a0f;
+  background: rgba(120, 255, 214, 0.9);
+  border: 1px solid rgba(120, 255, 214, 0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-send-btn:hover {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(120, 255, 214, 0.4);
+  transform: scale(1.02);
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.contact-link {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.contact-linkedin {
+  background: rgba(255, 105, 180, 0.15);
+  color: #ffb3e0;
+  border: 1px solid rgba(255, 105, 180, 0.5);
+}
+.contact-linkedin:hover {
+  background: rgba(255, 105, 180, 0.25);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.25);
+}
+
+/* ========== SCROLL REVEAL (cards slide up on scroll) ========== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.scroll-reveal.scroll-reveal-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ========== TIMELINE – HORIZONTAL + POP-UP ========== */
@@ -335,11 +511,11 @@ nav a:hover {
   box-sizing: border-box;
 }
 
-/* Visible: popped up + sway (rotation so bottom moves left/right, top pinned) */
+/* Visible: popped up + sway (rotation so bottom moves left/right, top pinned); transition so swing returns to straight */
 .timeline .timeline-track li.in-view div {
   opacity: 1;
   transform: rotate(var(--timeline-tilt, 0deg)) translateY(0) scale(1);
-  transition: opacity 0.5s ease-out, transform 0.15s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.4s ease-out;
 }
 
 /* Cyber-styled timeline cards – pinned at top (below dot), bottom sways */
@@ -378,6 +554,97 @@ nav a:hover {
   font: 1.2rem;
   font-style: italic;
   padding-bottom: 5px;
+}
+
+/* Timeline card: short summary + pink tech tags + Learn more */
+.timeline-item-short {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(220, 230, 240, 0.92);
+  margin: 0.5rem 0 0.75rem;
+}
+
+.timeline-job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.timeline .job-tag {
+  display: inline-block;
+  background: #0d0610;
+  border: 1px solid rgba(255, 105, 180, 0.5);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.72rem;
+  color: #ffb3e0;
+  box-shadow:
+    0 0 0 1px rgba(255, 105, 180, 0.15),
+    0 0 12px rgba(255, 105, 180, 0.15),
+    inset 0 0 12px rgba(255, 105, 180, 0.03);
+  white-space: nowrap;
+}
+
+.timeline .job-tag:hover {
+  border-color: rgba(255, 105, 180, 0.7);
+  box-shadow: 0 0 16px rgba(255, 105, 180, 0.25);
+}
+
+.timeline-learn-more,
+.timeline-show-less {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  color: rgba(120, 255, 214, 0.95);
+  background: transparent;
+  border: 1px solid rgba(120, 255, 214, 0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-learn-more:hover,
+.timeline-show-less:hover {
+  background: rgba(120, 255, 214, 0.15);
+  border-color: rgba(120, 255, 214, 0.8);
+  box-shadow: 0 0 14px rgba(120, 255, 214, 0.2);
+}
+
+.timeline-item-summary .timeline-learn-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.4rem;
+}
+
+/* Expanded: hide summary, show full details */
+.timeline-item.expanded .timeline-item-summary {
+  display: none;
+}
+
+.timeline-item-details {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.timeline-item.expanded .timeline-item-details {
+  display: block;
+}
+
+.timeline-item-details p {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.timeline-show-less {
+  display: block;
+  margin-top: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .job-details {
@@ -578,7 +845,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  padding: 0 2rem 7rem 2rem;
+  padding: 0 2rem 0 2rem;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -939,7 +1206,7 @@ header {
 }
 
 
-/* Timeline – very small screens (still one job at a time) */
+/* Timeline – very small screens: more prominent arrows so viewers know to slide */
 @media screen and (max-width: 600px) {
   .timeline::before {
     width: 80%;
@@ -960,13 +1227,42 @@ header {
     height: 12px;
   }
   .timeline-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
-    top: 38px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    top: 36px;
+    border-width: 2px;
+    border-color: rgba(120, 255, 214, 0.85);
+    background: rgba(10, 10, 15, 0.95);
+    color: rgba(120, 255, 214, 1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(120, 255, 214, 0.2);
   }
-  .timeline-arrow-prev { left: 4px; }
-  .timeline-arrow-next { right: 4px; }
+  .timeline-arrow-prev {
+    left: 6px;
+  }
+  .timeline-arrow-next {
+    right: 6px;
+  }
+  .timeline-arrow:not(:disabled):hover,
+  .timeline-arrow:not(:disabled):active {
+    background: rgba(120, 255, 214, 0.2);
+    box-shadow: 0 0 24px rgba(120, 255, 214, 0.35);
+  }
+}
+
+/* Hint text on small screens so viewers know they can swipe or use arrows */
+.timeline-swipe-hint {
+  display: none;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(120, 255, 214, 0.8);
+  margin-top: 0.5rem;
+  margin-bottom: -0.25rem;
+}
+@media screen and (max-width: 900px) {
+  .timeline-swipe-hint {
+    display: block;
+  }
 }
 
 /* Project cards layout tuning */
@@ -1070,7 +1366,7 @@ header {
 
 .github-cta-btn {
   display: inline-block;
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 0.95rem;
   color: rgba(120, 255, 214, 0.95);
   background: transparent;
